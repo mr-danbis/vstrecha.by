@@ -178,6 +178,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   color: #051B1F;
+  font-family: "Montserrat", sans-serif;
 }
 
 .box {
@@ -211,6 +212,26 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(
+    13px + 5 *
+      ((100vw - 320px) / 1600)
+  );
+  border-radius: 10px;
+  padding: 15px 35px;
+  color: #FFFFFF;
+  border: 1px solid #C2834C;
+  background-color: transparent;
+}
+.btn:hover {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #C2834C;
 }
 
 .footer {
@@ -513,5 +534,110 @@ body {
 @media (max-width: 500px) {
   .header-all__nav {
     display: none;
+  }
+}
+.is18 {
+  background: -o-linear-gradient(349.94deg, #62AEF3 -13.69%, #254CB1 44.49%, #414DBC 100.39%);
+  background: linear-gradient(100.06deg, #62AEF3 -13.69%, #254CB1 44.49%, #414DBC 100.39%);
+  color: #FFFFFF;
+}
+.is18__info {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.is18__logo {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.is18__title {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(
+    25px + 15 *
+      ((100vw - 320px) / 1600)
+  );
+  margin-bottom: 30px;
+}
+.is18__age {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.is18__age-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  font-size: calc(
+    15px + 5 *
+      ((100vw - 320px) / 1600)
+  );
+}
+.is18__age-btns {
+  margin-bottom: 15px;
+}
+.is18__age-btn:first-child {
+  margin-right: 15px;
+}
+.is18__addition {
+  width: 70%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: calc(
+    13px + 5 *
+      ((100vw - 320px) / 1600)
+  );
+}
+
+@media (max-width: 1000px) {
+  .is18__info {
+    width: 95%;
+  }
+  .is18__logo {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .is18__age-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .is18__age-btn {
+    width: 100%;
+  }
+  .is18__age-btn:first-child {
+    margin-bottom: 12px;
   }
 }

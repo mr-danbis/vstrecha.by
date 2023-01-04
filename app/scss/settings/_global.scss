@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   color: #051B1F;
-  ;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .box {
@@ -28,4 +28,19 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.btn{
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(18,13);
+    border-radius: 10px;
+    padding: 15px 35px;
+    color: #FFFFFF;
+    border: 1px solid #C2834C;
+    background-color: transparent;
+    &:hover{
+        transition: all .3s;
+        background-color: #C2834C;
+    }
 }
