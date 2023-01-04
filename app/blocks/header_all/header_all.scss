@@ -1,0 +1,134 @@
+.header-all {
+  background-image: url("/images/icons/back.svg");
+  background-size: cover;
+  position: relative;
+  &__dots-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &__dots-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__container {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__service {
+    display: flex;
+  }
+
+  &__registration {
+    background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
+    border: 1px solid #ff851d;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    padding: 15px 25px;
+    margin-right: 15px;
+    transition: 0.3s;
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &__help {
+    border: 1px solid #ff851d;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    padding: 15px 35px;
+    transition: 0.3s;
+    &:hover {
+      background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
+    }
+  }
+
+  &__nav {
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    margin-right: 18px;
+    cursor: pointer;
+  }
+
+  &__lung {
+    cursor: pointer;
+    margin-right: 18px;
+  }
+
+  &__burger {
+    cursor: pointer;
+    padding-top: 17px;
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-all {
+    &__logo {
+      flex-basis: 70%;
+    }
+    &__info {
+      display: none;
+    }
+    &__service {
+      display: none;
+    }
+    &__nav {
+      padding: 0;
+    }
+    &__burger {
+      display: flex;
+      padding-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-all {
+    &__dots-left {
+      display: none;
+    }
+    &__dots-right {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header-all {
+    &__nav {
+      display: none;
+    }
+  }
+}
