@@ -12,12 +12,12 @@
   }
 
   &__logo {
-    flex-basis: 20%;
+    width: 180px;
     margin-right: 20px;
   }
 
   &__basic {
-    flex-basis: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -43,6 +43,12 @@
     &:not(:last-child) {
       padding-bottom: 12px;
     }
+    &-hover{
+        &:hover{
+            transition: all .3s;
+            opacity: .5;
+        }
+    }
   }
 
   &__social {
@@ -55,6 +61,10 @@
     &-item {
       &:not(:last-child) {
         padding-right: 15px;
+      }
+      &:hover{
+        transform: scale(1.1);
+        transition: all .3s;
       }
     }
   }
