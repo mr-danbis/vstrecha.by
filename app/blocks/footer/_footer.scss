@@ -9,6 +9,7 @@
     display: flex;
     align-items: start;
     padding-bottom: 30px;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -17,9 +18,16 @@
   }
 
   &__basic {
-    width: 100%;
+    flex-basis: 75%;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-basis: 55%;
   }
 
   &__menu {
@@ -43,11 +51,11 @@
     &:not(:last-child) {
       padding-bottom: 12px;
     }
-    &-hover{
-        &:hover{
-            transition: all .3s;
-            opacity: .5;
-        }
+    &-hover {
+      &:hover {
+        transition: all 0.3s;
+        opacity: 0.5;
+      }
     }
   }
 
@@ -62,9 +70,9 @@
       &:not(:last-child) {
         padding-right: 15px;
       }
-      &:hover{
+      &:hover {
         transform: scale(1.1);
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
   }
@@ -111,6 +119,7 @@
     &__container {
       flex-direction: column;
     }
+
     &__basic {
       padding-top: 20px;
       width: 100%;
@@ -128,9 +137,11 @@
 @media (max-width: 840px) {
   .footer {
     &__basic {
-      flex-direction: column;
       align-items: start;
-      justify-content: start;
+    }
+    &__data {
+      flex-direction: column;
+      flex-basis: content;
     }
     &__menu {
       padding-bottom: 30px;
@@ -138,6 +149,15 @@
     &__social {
       align-items: start;
       padding-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .footer {
+    &__basic {
+      flex-direction: column;
+      justify-content: start;
     }
   }
 }
