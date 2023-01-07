@@ -1,0 +1,80 @@
+.help {
+  margin: auto;
+  @include adaptiv_marginBottom(156, 50);
+  max-width: 840px;
+  position: relative;
+  padding: 30px 40px;
+  background: linear-gradient(
+    100.06deg,
+    #62aef3 -13.69%,
+    #254cb1 44.49%,
+    #414dbc 100.39%
+  );
+  border-radius: 10px;
+
+  &__man {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiv_font(30, 20);
+    line-height: 37px;
+    color: #ffffff;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    width: 70%;
+    font-weight: 500;
+    @include adaptiv_font(18, 15);
+    line-height: 22px;
+    color: #ffffff;
+    padding-bottom: 25px;
+  }
+
+  &__button {
+    border: 1px solid #c2834c;
+    background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
+    border-radius: 10px;
+    padding: 15px 68px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    &:hover {
+      transition: all 0.3s;
+      background: transparent;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .help {
+    &__man {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .help {
+    &__man {
+      transform: translate(0, -40%);
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .help {
+    &__man {
+      transform: translate(0, -20%);
+    }
+  }
+}
