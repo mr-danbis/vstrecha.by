@@ -1,0 +1,109 @@
+.mainSlider {
+    height: 100vh;
+    top: 0;
+    position: absolute;
+
+    .owl-stage{
+        display: flex;
+        height: 100%;
+    }
+    .owl-stage-outer{
+        height: 100%;
+    }
+
+    // .owl-nav{
+    //     width: 190px;
+    //     height: 80px;
+    //     border-radius: 10px;
+    //     position: absolute;
+    //     bottom: 100px;
+    //     button{
+    //         width: 50%;
+    //         background-color: #414DBC;
+    //     }
+    // }
+
+    .owl-dots{
+        width: 190px;
+        height: 20px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 50px;
+        button{
+            margin-right: 10px;
+            margin-left: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #414DBC;
+        }
+    }
+
+    &__item {
+        
+
+        &-title {
+            width: 60%;
+            font-style: normal;
+            font-weight: 600;
+            @include adaptiv-font(40,25);
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            line-height: 49px;
+        }
+
+        &-text{
+            width: 50%;
+            margin-bottom: 30px;
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiv-font(18,13);
+            line-height: 150%;
+            color: #FFFFFF;
+        }
+
+        &-link{
+            font-style: normal;
+            font-weight: 700;
+            @include adaptiv-font(18,13);
+            color: #FFFFFF;
+            &:hover{
+                transition: all .3s;
+                opacity: .5;
+            }
+        }
+
+        &-img{
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        
+    }
+}
+
+
+.animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+}
+.owl-animated-in {
+    z-index: 0;
+}
+.owl-animated-out {
+    z-index: 1;
+}
+.fadeOut {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

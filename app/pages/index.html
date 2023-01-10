@@ -3,10 +3,19 @@
   @@include('../blocks/head/head.html')
 
   <body>
-    <div class="wrapper">
-      @@include('../blocks/header/header_all.html')
-      <!-- /.header_all -->
-      <main class="main"></main>
+    <div class="wrapper mainPage">
+
+        <div class="box">
+            @@include('../blocks/header/header.html')
+            <!-- /.header -->
+            @@include('../blocks/slider/mainPage/mainSlider.html')
+            <!-- /.main page slider -->
+        </div>
+
+
+      <main class="main">
+
+      </main>
       <!-- /.main -->
 
       @@include('../blocks/footer/footer.html')

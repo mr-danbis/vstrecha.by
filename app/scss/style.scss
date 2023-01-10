@@ -7,7 +7,6 @@
 
 //common blocks
 @import "../blocks/header/header";
-@import "../blocks/header/header_all";
 @import "../blocks/footer/footer";
 //is 18 page styles
 @import "../blocks/is18Page/is18";
@@ -18,3 +17,5 @@
 @import "../blocks/about/administration/administration";
 @import "../blocks/about/about_us/about_us";
 @import "../blocks/about/help/help";
+
+@import '../blocks/slider/mainPage/mainSlider';
