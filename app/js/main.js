@@ -10,13 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const mainPageSlider = new Slider();
+  const mainPageBannerSlider = new Slider();
+  const mainPageNewsSlider = new Slider();
 
-  mainPageSlider.addSlider(".bannerSlider", {
+  mainPageBannerSlider.addSlider(".bannerSlider", {
     items: 1,
     animateOut: "fadeOut",
     mouseDrag: false,
   });
+
+  mainPageNewsSlider.addSlider(".newsSlider", {
+    items: 3,
+    margin: 40
+  });
+
 
   function openMobileSidebar() {
     const burgerBtn = document.querySelector(".header__burger");

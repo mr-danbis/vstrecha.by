@@ -38,20 +38,16 @@
     padding-bottom: 25px;
   }
 
-  &__button {
-    border: 1px solid #c2834c;
-    background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
-    border-radius: 10px;
-    padding: 15px 68px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    color: #ffffff;
-    &:hover {
-      transition: all 0.3s;
-      background: transparent;
+  &__btn.btn-active{
+    color: #FFFFFF !important;
+    background-color: #FF851D !important;
+    &:hover{
+        border: 1px solid #FF851D !important;
+        background-color: transparent !important;
     }
   }
+
+  
 }
 
 @media (max-width: 700px) {

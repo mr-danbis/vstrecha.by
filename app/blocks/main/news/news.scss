@@ -1,5 +1,16 @@
-.news{
+.news {
     background-color: rgba(35, 187, 220, 0.05);
-    @include adaptiv-paddingTop(40,20);
-    @include adaptiv-paddingBottom(40,30);
+    @include adaptiv-paddingTop(40, 20);
+    @include adaptiv-paddingBottom(40, 30);
+
+    &__btn.btn-active {
+        color: #FFFFFF !important;
+        background-color: #FF851D !important;
+
+        &:hover {
+            border: 1px solid #FF851D !important;
+            background-color: transparent !important;
+            color: #FF851D !important;
+        }
+    }
 }

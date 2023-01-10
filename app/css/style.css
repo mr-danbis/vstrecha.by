@@ -241,14 +241,17 @@ body {
   border-radius: 10px;
   padding: 15px 35px;
   color: #FFFFFF;
-  border: 1px solid #C2834C;
+  border: 1px solid #FF851D;
   background-color: transparent;
-}
-.btn:hover {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #C2834C;
+}
+.btn-active {
+  background-color: #FF851D;
+}
+.btn:hover {
+  background-color: #FF851D;
 }
 
 @media (max-width: 1600px) {
@@ -676,6 +679,16 @@ body {
   margin-bottom: 20px;
 }
 
+.owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.owl-stage-outer {
+  overflow-x: hidden;
+}
+
 .is18 {
   background: -o-linear-gradient(349.94deg, #62AEF3 -13.69%, #254CB1 44.49%, #414DBC 100.39%);
   background: linear-gradient(100.06deg, #62AEF3 -13.69%, #254CB1 44.49%, #414DBC 100.39%);
@@ -781,85 +794,6 @@ body {
     margin-bottom: 12px;
   }
 }
-.areas {
-  padding-bottom: calc(
-    50px + 80 *
-      ((100vw - 320px) / 1600)
-  );
-}
-.areas__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: calc(15px + 25 * ((100vw - 320px) / 1600));
-}
-.areas__item {
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.areas__item:hover {
-  opacity: 0.6;
-}
-.areas__item-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.areas__item-title {
-  position: absolute;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 37px;
-  text-align: center;
-  color: #FFFFFF;
-  font-size: calc(
-    20px + 10 *
-      ((100vw - 320px) / 1600)
-  );
-  padding-bottom: 20px;
-  border-bottom: 1px solid #FFFFFF;
-  bottom: 40px;
-  width: 80%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-@media (max-width: 750px) {
-  .areas__item-title {
-    line-height: 25px;
-    bottom: 20px;
-  }
-}
-@media (max-width: 600px) {
-  .areas__list {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: (200px)[4];
-    grid-template-rows: repeat(4, 200px);
-  }
-}
-.news {
-  background-color: rgba(35, 187, 220, 0.05);
-  padding-top: calc(
-    20px + 20 *
-      ((100vw - 320px) / 1600)
-  );
-  padding-bottom: calc(
-    30px + 10 *
-      ((100vw - 320px) / 1600)
-  );
-}
-
 .bannerSlider {
   height: 100vh;
   top: 0;
@@ -970,6 +904,144 @@ body {
     opacity: 0;
   }
 }
+.areas {
+  padding-bottom: calc(
+    50px + 80 *
+      ((100vw - 320px) / 1600)
+  );
+}
+.areas__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: calc(15px + 25 * ((100vw - 320px) / 1600));
+}
+.areas__item {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.areas__item:hover {
+  opacity: 0.6;
+}
+.areas__item-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.areas__item-title {
+  position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 37px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: calc(
+    20px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+  padding-bottom: 20px;
+  border-bottom: 1px solid #FFFFFF;
+  bottom: 40px;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media (max-width: 750px) {
+  .areas__item-title {
+    line-height: 25px;
+    bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .areas__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (200px)[4];
+    grid-template-rows: repeat(4, 200px);
+  }
+}
+.news {
+  background-color: rgba(35, 187, 220, 0.05);
+  padding-top: calc(
+    20px + 20 *
+      ((100vw - 320px) / 1600)
+  );
+  padding-bottom: calc(
+    30px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+}
+.news__btn.btn-active {
+  color: #FFFFFF !important;
+  background-color: #FF851D !important;
+}
+.news__btn.btn-active:hover {
+  border: 1px solid #FF851D !important;
+  background-color: transparent !important;
+  color: #FF851D !important;
+}
+
+.newsSlider {
+  margin-bottom: calc(35px + 15 * ((100vw - 320px) / 1600));
+  position: relative;
+}
+.newsSlider__item {
+  display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.newsSlider__item:hover {
+  opacity: 0.6;
+}
+.newsSlider__item-img {
+  margin-bottom: 12px;
+  height: 50%;
+}
+.newsSlider__item-info {
+  height: 50%;
+}
+.newsSlider__item-title {
+  font-size: calc(
+    18px + 7 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #1D1D1D;
+  margin-bottom: 10px;
+}
+.newsSlider__item-date {
+  font-size: calc(
+    14px + 2 *
+      ((100vw - 320px) / 1600)
+  );
+  color: rgba(29, 29, 29, 0.5);
+  margin-bottom: 12px;
+  display: block;
+}
+.newsSlider__item-text {
+  font-size: calc(
+    15px + 3 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #1D1D1D;
+}
+.newsSlider .owl-nav {
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+
 .administration {
   margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1600));
 }
@@ -1406,22 +1478,13 @@ body {
   color: #ffffff;
   padding-bottom: 25px;
 }
-.help__button {
-  border: 1px solid #c2834c;
-  background: -o-linear-gradient(358.66deg, #ff851d 2.56%, #ffa456 109.6%);
-  background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
-  border-radius: 10px;
-  padding: 15px 68px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: #ffffff;
+.help__btn.btn-active {
+  color: #FFFFFF !important;
+  background-color: #FF851D !important;
 }
-.help__button:hover {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  background: transparent;
+.help__btn.btn-active:hover {
+  border: 1px solid #FF851D !important;
+  background-color: transparent !important;
 }
 
 @media (max-width: 700px) {

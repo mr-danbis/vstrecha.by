@@ -1,0 +1,42 @@
+.newsSlider{
+    @include adaptiv-marginBottom(50,35);
+    position: relative;
+    &__item{
+        display: block;
+        transition: all .3s;
+        &:hover{
+            opacity: .6;
+        }
+
+        &-img{
+            margin-bottom: 12px;
+            height: 50%;
+        }
+        &-info{
+            height: 50%;
+        }
+        &-title{
+            @include adaptiv-font(25,18);
+            color: #1D1D1D;
+            margin-bottom: 10px;
+        }
+        &-date{
+            @include adaptiv-font(16,14);
+            color: rgba(29, 29, 29, 0.5);
+            margin-bottom: 12px;
+            display: block;
+        }
+        &-text{
+            @include adaptiv-font(18,15);
+            color: #1D1D1D;
+        }
+    }
+
+    .owl{
+        &-nav{
+            position: absolute;
+            right: 0;
+            top: -60px;
+        }
+    }
+}

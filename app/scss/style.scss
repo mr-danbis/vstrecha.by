@@ -9,14 +9,16 @@
 @import "../blocks/header/header";
 @import "../blocks/footer/footer";
 @import "../blocks/sidebar/sidebar";
+@import "../blocks/sliders/sliders";
 
 //is 18 page styles
 @import "../blocks/is18Page/is18";
 
 //main page blocks
+@import '../blocks/sliders/mainPage/banner/bannerSlider';
 @import "../blocks/main/areas/areas";
 @import "../blocks/main/news/news";
-@import '../blocks/sliders/mainPage/banner/bannerSlider';
+@import '../blocks/sliders/mainPage/news/newsSlider';
 
 //about page blocks
 @import "../blocks/about/administration/administration";
