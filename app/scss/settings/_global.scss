@@ -1,52 +1,75 @@
 html,
 body {
-  overflow-x: hidden;
-  height: 100%;
-  color: #051b1f;
-  font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    color: #051B1F;
+    font-family: 'Montserrat', sans-serif;
 }
 
+
 .box {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.mainPage {
+    .main {
+        @include adaptiv-paddingTop(130, 50);
+    }
 }
 
 .footer {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .container {
-  width: 67%;
-  margin: 0 auto;
+    width: 67%;
+    margin: 0 auto;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(30,20);
+    @include adaptiv-marginBottom(50,20);
 }
 
 .btn {
-  font-style: normal;
-  font-weight: 700;
-  @include adaptiv-font(18, 13);
-  border-radius: 10px;
-  padding: 15px 35px;
-  color: #ffffff;
-  border: 1px solid #ff851d;
-  background-color: transparent;
-  &:hover {
-    transition: all 0.3s;
-    background-color: #ff851d;
-  }
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(18, 13);
+    border-radius: 10px;
+    padding: 15px 35px;
+    color: #FFFFFF;
+    border: 1px solid #C2834C;
+    background-color: transparent;
+
+    &:hover {
+        transition: all .3s;
+        background-color: #C2834C;
+    }
 }
 
+
 @media (max-width: 1600px) {
-  .container {
-    width: 90%;
-  }
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .title{
+        width: 100%;
+        text-align: center;
+    }
 }

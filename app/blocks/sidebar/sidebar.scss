@@ -1,25 +1,20 @@
 .sidebar {
   z-index: 13;
-  transform: translateX(-200%);
+  transform: translateX(200%);
   transition: all 0.3s;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  max-width: 417px;
+  background-color: #fff;
   position: absolute;
   height: 100%;
-  padding: 45px 25px;
-  background: linear-gradient(
-    100.06deg,
-    #62aef3 -13.69%,
-    #254cb1 44.49%,
-    #414dbc 100.39%
-  );
+  padding: 80px 45px;
+  filter: drop-shadow(0px 4px 10px rgba(3, 3, 129, 0.25));
 
   &__close {
     position: absolute;
-    right: 24px;
-    top: 40px;
+    right: 35px;
+    top: 35px;
   }
 
   &__info {
@@ -27,99 +22,21 @@
     flex-direction: column;
   }
 
-  &__menu {
-    display: flex;
-    align-items: start;
-    &-sub {
-      display: flex;
-    }
-  }
-
-  &__submenu {
-    display: none;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    &-list {
-      display: flex;
-      flex-direction: column;
-    }
-    &-sub {
-      display: none;
-      flex-direction: column;
-      padding-left: 20px;
-    }
-  }
-
-  &__up {
-    &-sub {
-      margin-top: -5px;
-    }
-  }
-
-  &__down {
-    display: none;
-    &-sub {
-      margin-top: -5px;
-    }
-  }
-
-  .active {
-    .sidebar__up {
-      display: none;
-    }
-    .sidebar__down {
-      display: block;
-    }
-  }
-
   &__text {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #ffffff;
-    margin-bottom: 15px;
-
-    &-down {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      color: #ffffff;
-      margin-bottom: 15px;
-    }
+    color: #1d1d1d;
+    margin-bottom: 17px;
 
     &:hover {
       transition: all 0.3s;
       color: #ff851d;
     }
-
-    &-sub {
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 18px;
-      color: #ffffff;
-      padding-bottom: 10px;
-      &:hover {
-        transition: all 0.3s;
-        color: #ff851d;
-      }
-      &--down {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-        color: #ffffff;
-        padding-bottom: 10px;
-      }
-    }
   }
 
-  &__social {
-    padding-top: 25px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    &-media {
-      margin-right: 20px;
-    }
+  &__lung {
+    margin: 5px 0 22px 0;
   }
 
   &__service {

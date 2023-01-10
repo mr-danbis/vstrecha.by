@@ -24,30 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobMenu = document.querySelector(".sidebar");
 
     burgerBtn.addEventListener("click", () => {
-      mobMenu.style.transform = "translateX(0)";
+      mobMenu.style.transform = "translateX(0%)";
     });
 
     closeMenuBtn.addEventListener("click", () => {
-      mobMenu.style.transform = "translateX(-200%)";
+      mobMenu.style.transform = "translateX(100%)";
+    });
+
+    mobMenu.addEventListener("click", (event) => {
+      if (event.target) {
+        mobMenu.style.transform = "translateX(100%)";
+      }
     });
   }
   openMobileSidebar();
-});
-
-$(document).ready(function () {
-  $(".sidebar__menu").click(function (event) {
-    $(this).toggleClass("active").next().slideToggle();
-  });
-
-  $(".sidebar__menu-sub").click(function (event) {
-    $(this).toggleClass("active").next().slideToggle();
-  });
-
-  $(".header__menu").click(function (event) {
-    $(this).toggleClass("active").next().slideToggle();
-  });
-
-  $(".header__menu-sub").click(function (event) {
-    $(this).toggleClass("active").next().slideToggle();
-  });
 });
