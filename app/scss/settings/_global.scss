@@ -2,10 +2,9 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
-  color: #051B1F;
-  font-family: 'Montserrat', sans-serif;
+  color: #051b1f;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .box {
   height: 100vh;
@@ -31,24 +30,23 @@ body {
   margin: 0 auto;
 }
 
-.btn{
-    font-style: normal;
-    font-weight: 700;
-    @include adaptiv-font(18,13);
-    border-radius: 10px;
-    padding: 15px 35px;
-    color: #FFFFFF;
-    border: 1px solid #C2834C;
-    background-color: transparent;
-    &:hover{
-        transition: all .3s;
-        background-color: #C2834C;
-    }
+.btn {
+  font-style: normal;
+  font-weight: 700;
+  @include adaptiv-font(18, 13);
+  border-radius: 10px;
+  padding: 15px 35px;
+  color: #ffffff;
+  border: 1px solid #ff851d;
+  background-color: transparent;
+  &:hover {
+    transition: all 0.3s;
+    background-color: #ff851d;
+  }
 }
 
-
 @media (max-width: 1600px) {
-    .container{
-        width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
 }
