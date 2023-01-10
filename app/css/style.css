@@ -613,19 +613,16 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #1d1d1d;
-}
-.sidebar__text:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 17px;
 }
 .sidebar__text:hover {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  opacity: 0.5;
+  color: #ff851d;
 }
 .sidebar__lung {
-  cursor: pointer;
-  margin-right: 18px;
+  margin: 5px 0 22px 0;
 }
 .sidebar__service {
   display: -webkit-box;
@@ -635,6 +632,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.sidebar__btn {
+  border: 1px solid #ff851d;
+  background: -o-linear-gradient(358.66deg, #ff851d 2.56%, #ffa456 109.6%);
+  background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .is18 {

@@ -27,24 +27,31 @@
     font-size: 18px;
     line-height: 22px;
     color: #1d1d1d;
-
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
+    margin-bottom: 17px;
 
     &:hover {
       transition: all 0.3s;
-      opacity: 0.5;
+      color: #ff851d;
     }
   }
 
   &__lung {
-    cursor: pointer;
-    margin-right: 18px;
+    margin: 5px 0 22px 0;
   }
 
   &__service {
     display: flex;
     flex-direction: column;
+  }
+
+  &__btn {
+    border: 1px solid #ff851d;
+    background: linear-gradient(91.34deg, #ff851d 2.56%, #ffa456 109.6%);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
   }
 }
