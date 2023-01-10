@@ -1,0 +1,5 @@
+.news{
+    background-color: rgba(35, 187, 220, 0.05);
+    @include adaptiv-paddingTop(40,20);
+    @include adaptiv-paddingBottom(40,30);
+}

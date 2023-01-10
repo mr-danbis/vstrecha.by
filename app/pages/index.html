@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('../blocks/head/head.html')
+@@include('../blocks/head/head.html')
 
-  <body>
+<body>
     <div class="wrapper mainPage">
 
         <div class="box">
             @@include('../blocks/header/header.html')
             <!-- /.header -->
-            @@include('../blocks/slider/mainPage/mainSlider.html')
-            <!-- /.main page slider -->
+            @@include('../blocks/sliders/mainPage/banner/bannerSlider.html')
+            <!-- /.banner slider -->
         </div>
 
 
-      <main class="main">
+        <main class="main">
 
-        <div class="container">
             @@include('../blocks/main/areas/areas.html')
             <!-- /.areas -->
-        </div>
+            @@include('../blocks/main/news/news.html')
+            <!-- /.news -->
 
 
-      </main>
-      <!-- /.main -->
+        </main>
+        <!-- /.main -->
 
-      @@include('../blocks/footer/footer.html')
-      <!-- /.footer -->
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
 
-      @@include('../blocks/sidebar/sidebar.html')
-      <!-- /.sidebar -->
+        @@include('../blocks/sidebar/sidebar.html')
+        <!-- /.sidebar -->
     </div>
     <!-- /.wrapper -->
 
     @@include('../blocks/foot/foot.html')
     <!-- /.foot -->
-  </body>
+</body>
+
 </html>

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const mainPageSlider = new Slider();
 
-  mainPageSlider.addSlider(".mainSlider", {
+  mainPageSlider.addSlider(".bannerSlider", {
     items: 1,
     animateOut: "fadeOut",
     mouseDrag: false,

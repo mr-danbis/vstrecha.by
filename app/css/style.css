@@ -848,6 +848,128 @@ body {
     grid-template-rows: repeat(4, 200px);
   }
 }
+.news {
+  background-color: rgba(35, 187, 220, 0.05);
+  padding-top: calc(
+    20px + 20 *
+      ((100vw - 320px) / 1600)
+  );
+  padding-bottom: calc(
+    30px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+}
+
+.bannerSlider {
+  height: 100vh;
+  top: 0;
+  position: absolute;
+}
+.bannerSlider .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+.bannerSlider .owl-stage-outer {
+  height: 100%;
+}
+.bannerSlider .owl-nav {
+  width: 190px;
+  height: 80px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 100px;
+}
+.bannerSlider .owl-nav button {
+  width: 50%;
+  background-color: #414DBC;
+}
+.bannerSlider__item-title {
+  width: 60%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(
+    25px + 15 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  line-height: 49px;
+}
+.bannerSlider__item-text {
+  width: 50%;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(
+    13px + 5 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 150%;
+  color: #FFFFFF;
+}
+.bannerSlider__item-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(
+    13px + 5 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #FFFFFF;
+}
+.bannerSlider__item-link:hover {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.5;
+}
+.bannerSlider__item-img {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.owl-animated-in {
+  z-index: 0;
+}
+
+.owl-animated-out {
+  z-index: 1;
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .administration {
   margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1600));
 }
@@ -1320,118 +1442,5 @@ body {
     -webkit-transform: translate(0, -20%);
         -ms-transform: translate(0, -20%);
             transform: translate(0, -20%);
-  }
-}
-.mainSlider {
-  height: 100vh;
-  top: 0;
-  position: absolute;
-}
-.mainSlider .owl-stage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-}
-.mainSlider .owl-stage-outer {
-  height: 100%;
-}
-.mainSlider .owl-dots {
-  width: 190px;
-  height: 20px;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 50px;
-}
-.mainSlider .owl-dots button {
-  margin-right: 10px;
-  margin-left: 10px;
-  width: 10px;
-  height: 10px;
-  background-color: #414DBC;
-}
-.mainSlider__item-title {
-  width: 60%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: calc(
-    25px + 15 *
-      ((100vw - 320px) / 1600)
-  );
-  color: #FFFFFF;
-  margin-bottom: 15px;
-  line-height: 49px;
-}
-.mainSlider__item-text {
-  width: 50%;
-  margin-bottom: 30px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: calc(
-    13px + 5 *
-      ((100vw - 320px) / 1600)
-  );
-  line-height: 150%;
-  color: #FFFFFF;
-}
-.mainSlider__item-link {
-  font-style: normal;
-  font-weight: 700;
-  font-size: calc(
-    13px + 5 *
-      ((100vw - 320px) / 1600)
-  );
-  color: #FFFFFF;
-}
-.mainSlider__item-link:hover {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0.5;
-}
-.mainSlider__item-img {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.animated {
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.owl-animated-in {
-  z-index: 0;
-}
-
-.owl-animated-out {
-  z-index: 1;
-}
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-          animation-name: fadeOut;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
