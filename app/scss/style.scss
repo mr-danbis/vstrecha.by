@@ -15,10 +15,10 @@
 @import "../blocks/is18Page/is18";
 
 //main page blocks
-@import '../blocks/sliders/mainPage/banner/bannerSlider';
+@import "../blocks/sliders/mainPage/banner/bannerSlider";
 @import "../blocks/main/areas/areas";
 @import "../blocks/main/news/news";
-@import '../blocks/sliders/mainPage/news/newsSlider';
+@import "../blocks/sliders/mainPage/news/newsSlider";
 @import "../blocks/main/addresses/addresses";
 @import "../blocks/main/partners/partners";
 
@@ -26,3 +26,4 @@
 @import "../blocks/about/administration/administration";
 @import "../blocks/about/about_us/about_us";
 @import "../blocks/about/help/help";
+@import "../blocks/about/modal/modal";
