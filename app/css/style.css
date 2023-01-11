@@ -1111,6 +1111,17 @@ body {
     display: none;
   }
 }
+.addresses {
+  padding-top: calc(
+    50px + 80 *
+      ((100vw - 320px) / 1600)
+  );
+  padding-bottom: calc(
+    50px + 80 *
+      ((100vw - 320px) / 1600)
+  );
+}
+
 .administration {
   margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1600));
 }

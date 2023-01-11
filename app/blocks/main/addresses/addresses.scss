@@ -1,0 +1,4 @@
+.addresses{
+    @include adaptiv-paddingTop(130,50);
+    @include adaptiv-paddingBottom(130,50);
+}
