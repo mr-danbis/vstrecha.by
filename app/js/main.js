@@ -20,8 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   mainPageNewsSlider.addSlider(".newsSlider", {
-    items: 3,
-    margin: 40
+    responsive: {
+        0:{
+            items: 1,
+            margin: 20,
+        },
+        500: {
+            items: 2,
+            margin: 30,
+        },
+        1100: {
+            items: 3,
+            margin: 40,
+        }
+    }
   });
 
 

@@ -984,14 +984,26 @@ body {
 }
 .news__btn.btn-active {
   color: #FFFFFF !important;
-  background-color: #FF851D !important;
 }
 .news__btn.btn-active:hover {
   border: 1px solid #FF851D !important;
   background-color: transparent !important;
   color: #FF851D !important;
 }
+.news__btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
 
+@media (max-width: 500px) {
+  .news__btn {
+    width: 100%;
+  }
+}
 .newsSlider {
   margin-bottom: calc(35px + 15 * ((100vw - 320px) / 1600));
   position: relative;
@@ -1005,12 +1017,25 @@ body {
 .newsSlider__item:hover {
   opacity: 0.6;
 }
+.newsSlider__item:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .newsSlider__item-img {
   margin-bottom: 12px;
-  height: 50%;
+  height: 20em;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.newsSlider__item-info {
-  height: 50%;
+.newsSlider__item-img img {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .newsSlider__item-title {
   font-size: calc(
@@ -1019,6 +1044,10 @@ body {
   );
   color: #1D1D1D;
   margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .newsSlider__item-date {
   font-size: calc(
@@ -1035,13 +1064,53 @@ body {
       ((100vw - 320px) / 1600)
   );
   color: #1D1D1D;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.newsSlider .owl-dots {
+  display: none;
 }
 .newsSlider .owl-nav {
   position: absolute;
   right: 0;
-  top: -60px;
+  top: -50px;
+}
+.newsSlider .owl-nav button {
+  width: 30px;
+}
+.newsSlider .owl-nav button span {
+  color: transparent;
+}
+.newsSlider .owl-nav button:first-child {
+  margin-right: 12px;
+  position: relative;
+}
+.newsSlider .owl-nav button:first-child:after {
+  position: absolute;
+  content: url(/images/icons/prev.svg);
+  left: 0;
+}
+.newsSlider .owl-nav button:last-child {
+  position: relative;
+}
+.newsSlider .owl-nav button:last-child:after {
+  position: absolute;
+  content: url(/images/icons/next.svg);
+  left: 0;
 }
 
+@media (max-width: 700px) {
+  .newsSlider__item-img {
+    height: 15em;
+  }
+}
+@media (max-width: 500px) {
+  .newsSlider .owl-nav {
+    display: none;
+  }
+}
 .administration {
   margin-bottom: calc(50px + 150 * ((100vw - 320px) / 1600));
 }

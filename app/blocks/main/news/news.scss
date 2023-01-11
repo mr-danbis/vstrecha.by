@@ -3,14 +3,30 @@
     @include adaptiv-paddingTop(40, 20);
     @include adaptiv-paddingBottom(40, 30);
 
+
     &__btn.btn-active {
         color: #FFFFFF !important;
-        background-color: #FF851D !important;
 
         &:hover {
             border: 1px solid #FF851D !important;
             background-color: transparent !important;
             color: #FF851D !important;
+        }
+    }
+
+    &__btn{
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .news{
+        &__btn{
+            width: 100%;
         }
     }
 }
