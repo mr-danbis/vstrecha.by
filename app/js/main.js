@@ -51,6 +51,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   openMobileSidebar();
 
+  function openHelpForm() {
+    const formBtn = document.querySelectorAll(".help__button");
+    const closeFormBtn = document.querySelectorAll(".modal__close");
+    const modalForm = document.querySelector(".modal");
+
+    formBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "block";
+      });
+    });
+
+    closeFormBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "none";
+      });
+    });
+  }
+  openHelpForm();
+
   function dropDown() {
     $(".sidebar__menu").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
