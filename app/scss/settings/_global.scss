@@ -20,6 +20,7 @@ body {
 
 .main {
     flex: 1 0 auto;
+    @include adaptiv-paddingBottom(205, 105);
 }
 
 .mainPage {
