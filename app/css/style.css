@@ -1083,9 +1083,17 @@ body {
 }
 .newsSlider .owl-nav button {
   width: 30px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .newsSlider .owl-nav button span {
   color: transparent;
+}
+.newsSlider .owl-nav button:hover {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
 }
 .newsSlider .owl-nav button:first-child {
   margin-right: 12px;
