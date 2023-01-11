@@ -1,6 +1,6 @@
 .help {
   margin: auto;
-  @include adaptiv_marginBottom(156, 50);
+  @include adaptiv_marginBottom(156, 43);
   max-width: 840px;
   position: relative;
   padding: 30px 40px;
@@ -38,16 +38,15 @@
     padding-bottom: 25px;
   }
 
-  &__btn.btn-active{
-    color: #FFFFFF !important;
-    background-color: #FF851D !important;
-    &:hover{
-        border: 1px solid #FF851D !important;
-        background-color: transparent !important;
+  &__button {
+    border: 1px solid #ff851d;
+    background-color: #ff851d;
+    padding: 15px 68px;
+    &:hover {
+      transition: all 0.3s;
+      background: transparent;
     }
   }
-
-  
 }
 
 @media (max-width: 700px) {
@@ -55,22 +54,20 @@
     &__man {
       right: 0;
     }
+    &__button {
+      width: 50%;
+    }
   }
 }
 
 @media (max-width: 540px) {
   .help {
     &__man {
-      transform: translate(0, -40%);
-      width: 30%;
+      display: none;
     }
-  }
-}
-
-@media (max-width: 400px) {
-  .help {
-    &__man {
-      transform: translate(0, -20%);
+    &__text,
+    &__button {
+      width: 100%;
     }
   }
 }

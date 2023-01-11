@@ -1,14 +1,14 @@
 .footer {
   background: #23459b;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  @include adaptiv_paddingTop(40, 25);
+  @include adaptiv_paddingBottom(60, 20);
 
   &__container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transform: rotate(-0.09deg);
     display: flex;
     align-items: start;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     justify-content: space-between;
   }
 
@@ -49,12 +49,12 @@
     line-height: 18px;
     color: #ffffff;
     &:not(:last-child) {
-      padding-bottom: 12px;
+      @include adaptiv_paddingBottom(15, 12);
     }
     &-hover {
       &:hover {
         transition: all 0.3s;
-        opacity: 0.5;
+        color: #ff851d;
       }
     }
   }
@@ -100,6 +100,7 @@
   &__cards {
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     right: 0;
     top: 15px;
   }
@@ -121,12 +122,12 @@
     }
 
     &__basic {
-      padding-top: 20px;
+      padding-top: 30px;
       width: 100%;
     }
     &__cards {
       position: static;
-      padding-top: 15px;
+      padding-top: 25px;
     }
     &__author {
       padding-top: 15px;
@@ -148,7 +149,6 @@
     }
     &__social {
       align-items: start;
-      padding-bottom: 30px;
     }
   }
 }
@@ -158,6 +158,9 @@
     &__basic {
       flex-direction: column;
       justify-content: start;
+    }
+    &__social {
+      padding-bottom: 30px;
     }
   }
 }
