@@ -70,6 +70,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   openHelpForm();
 
+  function changeVacancy() {
+    const gomel = document.querySelector(".city__container-gomel");
+    const lida = document.querySelector(".city__container-lida");
+    const not = document.querySelector(".city__not");
+    const notOverlay = document.querySelector(".city__overlay");
+    var city = document.getElementById("city");
+
+    city.addEventListener("click", function () {
+      var index = city.selectedIndex;
+      if (index === 1) {
+        gomel.style.display = "flex";
+        lida.style.display = "none";
+        not.style.display = "none";
+        notOverlay.style.display = "none";
+      }
+      if (index === 2) {
+        gomel.style.display = "none";
+        lida.style.display = "flex";
+        not.style.display = "none";
+        notOverlay.style.display = "none";
+      }
+      if (index === 3) {
+        gomel.style.display = "none";
+        lida.style.display = "none";
+        not.style.display = "flex";
+        notOverlay.style.display = "flex";
+      }
+    });
+  }
+  changeVacancy();
+
   function dropDown() {
     $(".sidebar__menu").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
@@ -92,6 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     $(".sidebar__lung-ru").click(function (event) {
+      $(this).toggleClass("active").next().slideToggle();
+    });
+
+    $(".city__vacancy").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
     });
   }

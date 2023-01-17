@@ -124,6 +124,10 @@
   &__help {
     width: 50%;
     padding: 15px 5px;
+    &:hover {
+      transition: all 0.3s;
+      background: transparent;
+    }
   }
 
   &__remark {
