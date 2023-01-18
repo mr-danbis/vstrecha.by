@@ -70,37 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   openHelpForm();
 
-  function changeVacancy() {
-    const gomel = document.querySelector(".city__container-gomel");
-    const lida = document.querySelector(".city__container-lida");
-    const not = document.querySelector(".city__not");
-    const notOverlay = document.querySelector(".city__overlay");
-    var city = document.getElementById("city");
-
-    city.addEventListener("click", function () {
-      var index = city.selectedIndex;
-      if (index === 1) {
-        gomel.style.display = "flex";
-        lida.style.display = "none";
-        not.style.display = "none";
-        notOverlay.style.display = "none";
-      }
-      if (index === 2) {
-        gomel.style.display = "none";
-        lida.style.display = "flex";
-        not.style.display = "none";
-        notOverlay.style.display = "none";
-      }
-      if (index === 3) {
-        gomel.style.display = "none";
-        lida.style.display = "none";
-        not.style.display = "flex";
-        notOverlay.style.display = "flex";
-      }
-    });
-  }
-  changeVacancy();
-
   function dropDown() {
     $(".sidebar__menu").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
@@ -132,28 +101,55 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   dropDown();
 
+  function changeVacancy() {
+    const gomel = document.querySelector(".city__container-gomel");
+    const lida = document.querySelector(".city__container-lida");
+    const not = document.querySelector(".city__not");
+    const notOverlay = document.querySelector(".city__overlay");
+    var city = document.getElementById("city");
 
-
-  const cities = document.querySelectorAll('.addresses__map-city');
-  const modalBG = document.querySelector('.addresses__modal-bg');
-  const modal = document.querySelector('.addresses__modal');
-  cities.forEach(city => {
-
-    city.addEventListener('click', (e)=> {
-        modal.querySelector('.addresses__modal-text').innerText = city.dataset.name;
-        modal.querySelector('.addresses__modal-img').setAttribute('src', city.dataset.img);
-        modal.style.top = (e.y + 70) + 'px';
-        modal.style.left = (e.x + 230) + 'px';
-        modalBG.classList.add('active');
+    city.addEventListener("click", function () {
+      if (city.selectedIndex === 1) {
+        gomel.style.display = "flex";
+        lida.style.display = "none";
+        not.style.display = "none";
+        notOverlay.style.display = "none";
+      }
+      if (city.selectedIndex === 2) {
+        gomel.style.display = "none";
+        lida.style.display = "flex";
+        not.style.display = "none";
+        notOverlay.style.display = "none";
+      }
+      if (city.selectedIndex === 3) {
+        gomel.style.display = "none";
+        lida.style.display = "none";
+        not.style.display = "flex";
+        notOverlay.style.display = "flex";
+      }
     });
+  }
+  changeVacancy();
 
+  const cities = document.querySelectorAll(".addresses__map-city");
+  const modalBG = document.querySelector(".addresses__modal-bg");
+  const modal = document.querySelector(".addresses__modal");
+  cities.forEach((city) => {
+    city.addEventListener("click", (e) => {
+      modal.querySelector(".addresses__modal-text").innerText =
+        city.dataset.name;
+      modal
+        .querySelector(".addresses__modal-img")
+        .setAttribute("src", city.dataset.img);
+      modal.style.top = e.y + 70 + "px";
+      modal.style.left = e.x + 230 + "px";
+      modalBG.classList.add("active");
+    });
   });
 
-  document.addEventListener('click', (e) => {
-    if(e.target === modalBG){
-        modalBG.classList.remove('active');
+  document.addEventListener("click", (e) => {
+    if (e.target === modalBG) {
+      modalBG.classList.remove("active");
     }
   });
-
-
 });

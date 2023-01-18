@@ -45,6 +45,7 @@ body {
 }
 
 .btn {
+  white-space: nowrap;
   font-style: normal;
   font-weight: 700;
   @include adaptiv-font(18, 13);

@@ -236,6 +236,7 @@ body {
 }
 
 .btn {
+  white-space: nowrap;
   font-style: normal;
   font-weight: 700;
   font-size: calc(
@@ -308,9 +309,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 320px;
 }
 .header__logo {
   width: 180px;
+  margin-right: 10px;
 }
 .header__menu {
   display: -webkit-box;
@@ -408,6 +411,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  margin-left: 5px;
 }
 .header__search {
   margin-right: 18px;
@@ -460,6 +464,9 @@ body {
 @media (max-width: 1600px) {
   .header__dots-right {
     right: -45px;
+  }
+  .header__info {
+    width: 350px;
   }
 }
 @media (max-width: 1200px) {
