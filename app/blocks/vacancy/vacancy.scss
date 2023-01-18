@@ -1,4 +1,4 @@
-.city {
+.vacancy {
   position: relative;
 
   &__breadcrumbs {
@@ -124,10 +124,10 @@
   }
   .active {
     border-bottom: 1px solid #ffa456;
-    .city__vacancy-down {
+    .vacancy__vacancy-down {
       display: none;
     }
-    .city__vacancy-up {
+    .vacancy__vacancy-up {
       display: block;
     }
   }
@@ -178,7 +178,7 @@
 }
 
 @media (max-width: 1600px) {
-  .city {
+  .vacancy {
     &__not {
       right: -20px;
       top: -35px;
@@ -187,7 +187,7 @@
 }
 
 @media (max-width: 1300px) {
-  .city {
+  .vacancy {
     &__check {
       &-text {
         max-width: 340px;
@@ -197,7 +197,7 @@
 }
 
 @media (max-width: 960px) {
-  .city {
+  .vacancy {
     &__not {
       left: 50%;
       top: 20%;
@@ -210,13 +210,13 @@
       top: 0;
       bottom: 0;
       background: #f1f1f4;
-      opacity: 0.4;
+      opavacancy: 0.4;
     }
   }
 }
 
 @media (max-width: 730px) {
-  .city {
+  .vacancy {
     &__info {
       flex-direction: column;
     }
@@ -255,7 +255,7 @@
 }
 
 @media (max-width: 400px) {
-  .city {
+  .vacancy {
     &__not {
       width: 100%;
       left: 0%;

@@ -95,33 +95,33 @@ document.addEventListener("DOMContentLoaded", function () {
       $(this).toggleClass("active").next().slideToggle();
     });
 
-    $(".city__vacancy").click(function (event) {
+    $(".vacancy__vacancy").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
     });
   }
   dropDown();
 
   function changeVacancy() {
-    const gomel = document.querySelector(".city__container-gomel");
-    const lida = document.querySelector(".city__container-lida");
-    const not = document.querySelector(".city__not");
-    const notOverlay = document.querySelector(".city__overlay");
-    var city = document.getElementById("city");
+    const gomel = document.querySelector(".vacancy__container-gomel");
+    const lida = document.querySelector(".vacancy__container-lida");
+    const not = document.querySelector(".vacancy__not");
+    const notOverlay = document.querySelector(".vacancy__overlay");
+    var vacancy = document.getElementById("vacancy");
 
-    city.addEventListener("click", function () {
-      if (city.selectedIndex === 1) {
+    vacancy.addEventListener("click", function () {
+      if (vacancy.selectedIndex === 1) {
         gomel.style.display = "flex";
         lida.style.display = "none";
         not.style.display = "none";
         notOverlay.style.display = "none";
       }
-      if (city.selectedIndex === 2) {
+      if (vacancy.selectedIndex === 2) {
         gomel.style.display = "none";
         lida.style.display = "flex";
         not.style.display = "none";
         notOverlay.style.display = "none";
       }
-      if (city.selectedIndex === 3) {
+      if (vacancy.selectedIndex === 3) {
         gomel.style.display = "none";
         lida.style.display = "none";
         not.style.display = "flex";

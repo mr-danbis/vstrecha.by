@@ -29,8 +29,11 @@
 @import "../blocks/about/modal/modal";
 
 //vacancy page blocks
-@import "../blocks/vacancy/city";
+@import "../blocks/vacancy/vacancy";
 
 //calendar page blocks
 @import "../blocks/calendar/definition/definition";
 @import "../blocks/calendar/date/date";
+
+//service page blocks
+@import "../blocks/service/service";
