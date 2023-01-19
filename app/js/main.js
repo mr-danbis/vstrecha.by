@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainPageBannerSlider = new Slider();
   const mainPageNewsSlider = new Slider();
   const newsListPageSlider = new Slider();
+  const newsItemPageSlider = new Slider();
 
   mainPageBannerSlider.addSlider(".bannerSlider", {
     items: 1,
@@ -42,6 +43,23 @@ document.addEventListener("DOMContentLoaded", function () {
   newsListPageSlider.addSlider(".newsList__slider", {
     items: 1,
     margin: 40,
+  });
+
+  newsItemPageSlider.addSlider(".otherNews__slider", {
+    responsive: {
+      0: {
+        items: 1,
+        margin: 20,
+      },
+      500: {
+        items: 2,
+        margin: 30,
+      },
+      1100: {
+        items: 3,
+        margin: 40,
+      },
+    },
   });
 
   function openMobileSidebar() {
@@ -166,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function addNumberToSlider(){
-    const owlDots = document.querySelector('.owl-dots');
+    const owlDots = document.querySelector('.newsList__slider>.owl-dots');
     const owlDotsNumber = owlDots.querySelectorAll('button>span');
 
     owlDotsNumber.forEach((item, i) => {

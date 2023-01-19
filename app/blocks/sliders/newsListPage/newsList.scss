@@ -6,6 +6,12 @@
         margin-bottom: 20px;
     }
 
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-font(30,20);
+    }
+
     &__categories {
         &-btn {
             color: #C7C7C7;
@@ -142,7 +148,7 @@
                 width: 100%;
             }
 
-            .owl-dots{
+            .owl-dots {
                 width: 75%;
             }
         }
