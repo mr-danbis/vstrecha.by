@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('../blocks/head/head.html')
+@@include('../blocks/head/head.html')
 
-  <body>
+<body>
     <div class="wrapper">
-      @@include('../blocks/header/header.html')
-      <!-- /.header_all -->
-      <main class="main">
-        <div class="container">
-          @@include('../blocks/calendar/definition/definition.html')
-          <!-- /.definition -->
-          @@include('../blocks/calendar/date/date.html')
-          <!-- /.date -->
-        </div>
-        <!-- /.container -->
-      </main>
-      <!-- /.main -->
+        @@include('../blocks/header/header.html')
+        <!-- /.header_all -->
+        <main class="main">
+            <div class="container">
+                <section class="navigation">
+                    <div class="navigation__item">
+                        <a class="navigation__item-link" href="/">
+                            Главная
+                        </a>
+                    </div>
+                    <div class="navigation__item navigation__item--active">
+                        <a class="navigation__item-link" href="calendar_page.html">
+                            Календарь событий
+                        </a>
+                    </div>
+                </section>
 
-      @@include('../blocks/footer/footer.html')
-      <!-- /.footer -->
+                @@include('../blocks/calendar/definition/definition.html')
+                <!-- /.definition -->
+                @@include('../blocks/calendar/date/date.html')
+                <!-- /.date -->
+            </div>
+            <!-- /.container -->
+        </main>
+        <!-- /.main -->
 
-      @@include('../blocks/sidebar/sidebar.html')
-      <!-- /.sidebar -->
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+        @@include('../blocks/sidebar/sidebar.html')
+        <!-- /.sidebar -->
     </div>
     <!-- /.wrapper -->
 
     @@include('../blocks/foot/foot.html')
     <!-- /.foot -->
-  </body>
+</body>
+
 </html>
