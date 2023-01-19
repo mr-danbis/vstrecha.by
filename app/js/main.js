@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const wrapper = document.querySelector('.wrapper');
   class Slider {
     constructor(owlElement, owlOptions) {
       this.owlElement = owlElement;
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const mainPageBannerSlider = new Slider();
   const mainPageNewsSlider = new Slider();
+  const newsListPageSlider = new Slider();
 
   mainPageBannerSlider.addSlider(".bannerSlider", {
     items: 1,
@@ -34,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
         margin: 40,
       },
     },
+  });
+
+  newsListPageSlider.addSlider(".newsList__slider", {
+    items: 1,
+    margin: 40,
   });
 
   function openMobileSidebar() {
@@ -129,7 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  changeVacancy();
+
+  if(wrapper.classList.contains('vacancyPage')){
+      changeVacancy();
+  }
 
   const cities = document.querySelectorAll(".addresses__map-city");
   const modalBG = document.querySelector(".addresses__modal-bg");
@@ -152,4 +163,15 @@ document.addEventListener("DOMContentLoaded", function () {
       modalBG.classList.remove("active");
     }
   });
+
+
+  function addNumberToSlider(){
+    const owlDots = document.querySelector('.owl-dots');
+    const owlDotsNumber = owlDots.querySelectorAll('button>span');
+
+    owlDotsNumber.forEach((item, i) => {
+        item.innerHTML = i+1;
+    });
+  }
+  addNumberToSlider();
 });
