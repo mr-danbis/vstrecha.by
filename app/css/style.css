@@ -2681,6 +2681,65 @@ body {
   overflow: hidden;
   margin-bottom: calc(5px + 5 * ((100vw - 320px) / 1600));
 }
+.service__block-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(
+    15px + 3 *
+      ((100vw - 320px) / 1600)
+  );
+  margin-bottom: 10px;
+}
+.service__block-title a {
+  font-weight: 600;
+  color: #FF851D;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: underline;
+  text-decoration-color: #FF851D;
+}
+.service__block-title a:hover {
+  opacity: 0.5;
+}
+.service__list {
+  margin-bottom: 20px;
+}
+.service__list-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(
+    15px + 3 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 150%;
+  margin-bottom: 5px;
+  list-style: disc;
+  margin-left: 20px;
+}
+.service__cities {
+  margin-bottom: 10px;
+}
+.service__cities-item {
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(
+    15px + 3 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 150%;
+}
+.service__cities-item a {
+  font-weight: 600;
+  color: #1D1D1D;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.service__cities-item a:hover {
+  color: #FF851D;
+}
 
 @media (max-width: 700px) {
   .service__container {
