@@ -3,7 +3,7 @@
   @@include('../blocks/head/head.html')
 
   <body>
-    <div class="wrapper vacancyPage">
+    <div class="wrapper">
       @@include('../blocks/header/header.html')
       <!-- /.header_all -->
       <main class="main">
@@ -13,14 +13,16 @@
               <a class="navigation__item-link" href="/"> Главная </a>
             </div>
             <div class="navigation__item navigation__item--active">
-              <a class="navigation__item-link" href="vacancy_page.html">
-                Вакансии
+              <a class="navigation__item-link" href="self-testing_page.html">
+                Самотестирование
               </a>
             </div>
           </section>
 
-          @@include('../blocks/vacancyPage/vacancy.html')
-          <!-- /.vacancy -->
+          @@include('../blocks/selfTestingPage/info/info.html')
+          <!-- /.info -->
+          @@include('../blocks/selfTestingPage/result/result.html')
+          <!-- /.result -->
         </div>
         <!-- /.container -->
       </main>

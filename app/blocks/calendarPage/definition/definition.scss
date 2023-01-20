@@ -1,14 +1,5 @@
 .definition {
   @include adaptiv-marginBottom(100, 50);
-
-  &__title {
-    font-weight: 700;
-    @include adaptiv-font(30, 20);
-    line-height: 37px;
-    color: #1d1d1d;
-    padding-bottom: 20px;
-  }
-
   &__container {
     display: flex;
     justify-content: space-between;

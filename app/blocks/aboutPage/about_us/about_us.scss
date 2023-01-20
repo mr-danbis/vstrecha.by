@@ -1,13 +1,5 @@
 .about {
   margin-bottom: 108px;
-  &__title {
-    font-weight: 700;
-    @include adaptiv_font(30, 20);
-    line-height: 37px;
-    color: #000000;
-    @include adaptiv_marginBottom(25, 20);
-  }
-
   &__us {
     display: flex;
   }

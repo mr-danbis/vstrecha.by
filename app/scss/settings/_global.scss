@@ -37,7 +37,7 @@ body {
   margin: 0 auto;
 }
 
-.title {
+.title-main {
   font-style: normal;
   font-weight: 700;
   @include adaptiv-font(30, 20);
@@ -63,6 +63,21 @@ body {
   &:hover {
     background-color: #ff851d;
   }
+}
+
+.title {
+  font-weight: 700;
+  @include adaptiv-font(30, 20);
+  line-height: 37px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 400;
+  @include adaptiv-font(18, 15);
+  line-height: 150%;
+  color: #1d1d1d;
 }
 
 @media (max-width: 1600px) {
