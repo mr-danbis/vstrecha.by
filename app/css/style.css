@@ -225,7 +225,7 @@ body {
   margin: 0 auto;
 }
 
-.title {
+.title-main {
   font-style: normal;
   font-weight: 700;
   font-size: calc(
@@ -257,6 +257,27 @@ body {
 }
 .btn:hover {
   background-color: #ff851d;
+}
+
+.title {
+  font-weight: 700;
+  font-size: calc(
+    20px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 37px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: calc(
+    15px + 3 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 150%;
+  color: #1d1d1d;
 }
 
 @media (max-width: 1600px) {
@@ -1751,16 +1772,6 @@ body {
 .about {
   margin-bottom: 108px;
 }
-.about__title {
-  font-weight: 700;
-  font-size: calc(
-    20px + 10 *
-      ((100vw - 320px) / 1600)
-  );
-  line-height: 37px;
-  color: #000000;
-  margin-bottom: calc(20px + 5 * ((100vw - 320px) / 1600));
-}
 .about__us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2465,16 +2476,6 @@ body {
 .definition {
   margin-bottom: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
-.definition__title {
-  font-weight: 700;
-  font-size: calc(
-    20px + 10 *
-      ((100vw - 320px) / 1600)
-  );
-  line-height: 37px;
-  color: #1d1d1d;
-  padding-bottom: 20px;
-}
 .definition__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2633,14 +2634,7 @@ body {
 }
 
 .service__title {
-  font-weight: 700;
-  font-size: calc(
-    20px + 10 *
-      ((100vw - 320px) / 1600)
-  );
-  line-height: 37px;
-  color: #000000;
-  margin-bottom: calc(20px + 5 * ((100vw - 320px) / 1600));
+  width: 50%;
 }
 .service__container {
   display: -webkit-box;
@@ -2654,13 +2648,6 @@ body {
   margin-right: calc(0px + 40 * ((100vw - 320px) / 1600));
 }
 .service__text {
-  font-weight: 400;
-  font-size: calc(
-    15px + 3 *
-      ((100vw - 320px) / 1600)
-  );
-  line-height: 150%;
-  color: #1d1d1d;
   margin-bottom: calc(5px + 5 * ((100vw - 320px) / 1600));
 }
 .service__subtitle {
@@ -2692,12 +2679,12 @@ body {
 }
 .service__block-title a {
   font-weight: 600;
-  color: #FF851D;
+  color: #ff851d;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   text-decoration: underline;
-  text-decoration-color: #FF851D;
+  text-decoration-color: #ff851d;
 }
 .service__block-title a:hover {
   opacity: 0.5;
@@ -2731,14 +2718,15 @@ body {
   line-height: 150%;
 }
 .service__cities-item a {
+  white-space: nowrap;
   font-weight: 600;
-  color: #1D1D1D;
+  color: #1d1d1d;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .service__cities-item a:hover {
-  color: #FF851D;
+  color: #ff851d;
 }
 
 @media (max-width: 700px) {

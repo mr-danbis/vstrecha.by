@@ -23,18 +23,18 @@
 @import "../blocks/main/addresses/addresses";
 @import "../blocks/main/partners/partners";
 
-//about page blocks
-@import "../blocks/about/administration/administration";
-@import "../blocks/about/about_us/about_us";
-@import "../blocks/about/help/help";
-@import "../blocks/about/modal/modal";
+//aboutPage page blocks
+@import "../blocks/aboutPage/administration/administration";
+@import "../blocks/aboutPage/about_us/about_us";
+@import "../blocks/aboutPage/help/help";
+@import "../blocks/aboutPage/modal/modal";
 
-//vacancy page blocks
-@import "../blocks/vacancy/vacancy";
+//vacancyPage page blocks
+@import "../blocks/vacancyPage/vacancy";
 
-//calendar page blocks
-@import "../blocks/calendar/definition/definition";
-@import "../blocks/calendar/date/date";
+//calendarPage page blocks
+@import "../blocks/calendarPage/definition/definition";
+@import "../blocks/calendarPage/date/date";
 
 //service page blocks
 @import "../blocks/service/service";
@@ -44,4 +44,4 @@
 
 //news item page blocks
 @import "../blocks/newsPage/newsItem";
-@import "../blocks/sliders/otherNews/otherNews"
+@import "../blocks/sliders/otherNews/otherNews";

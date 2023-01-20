@@ -1,117 +1,109 @@
 .service {
-    &__title {
-        font-weight: 700;
-        @include adaptiv-font(30, 20);
-        line-height: 37px;
-        color: #000000;
-        @include adaptiv-marginBottom(25, 20);
+  &__title {
+    width: 50%;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    width: 50%;
+
+    &:first-child {
+      @include adaptiv-marginRight(40, 0);
     }
+  }
 
-    &__container {
-        display: flex;
-    }
+  &__text {
+    @include adaptiv-marginBottom(10, 5);
+  }
 
-    &__info {
-        width: 50%;
+  &__subtitle {
+    font-weight: 700;
+    @include adaptiv-font(18, 15);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    @include adaptiv-marginBottom(15, 10);
+    @include adaptiv-marginTop(15, 10);
+  }
 
-        &:first-child {
-            @include adaptiv-marginRight(40, 0);
+  &__img {
+    object-fit: cover;
+    overflow: hidden;
+    @include adaptiv-marginBottom(10, 5);
+  }
+
+  &__block {
+    &-title {
+      font-style: normal;
+      font-weight: 600;
+      @include adaptiv-font(18, 15);
+      margin-bottom: 10px;
+      a {
+        font-weight: 600;
+        color: #ff851d;
+        transition: all 0.3s;
+        text-decoration: underline;
+        text-decoration-color: #ff851d;
+        &:hover {
+          opacity: 0.5;
         }
+      }
     }
+  }
 
-    &__text {
-        font-weight: 400;
-        @include adaptiv-font(18, 15);
-        line-height: 150%;
+  &__list {
+    margin-bottom: 20px;
+
+    &-item {
+      font-style: normal;
+      font-weight: 400;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+      margin-bottom: 5px;
+      list-style: disc;
+      margin-left: 20px;
+    }
+  }
+
+  &__cities {
+    margin-bottom: 10px;
+
+    &-item {
+      margin-bottom: 5px;
+      font-style: normal;
+      font-weight: 400;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+
+      a {
+        white-space: nowrap;
+        font-weight: 600;
         color: #1d1d1d;
-        @include adaptiv-marginBottom(10, 5);
-    }
-
-    &__subtitle {
-        font-weight: 700;
-        @include adaptiv-font(18, 15);
-        line-height: 150%;
-        text-transform: uppercase;
-        color: #1d1d1d;
-        @include adaptiv-marginBottom(15, 10);
-        @include adaptiv-marginTop(15, 10);
-    }
-
-    &__img {
-        object-fit: cover;
-        overflow: hidden;
-        @include adaptiv-marginBottom(10, 5);
-    }
-
-
-    &__block {
-        &-title {
-            font-style: normal;
-            font-weight: 600;
-            @include adaptiv-font(18, 15);
-            margin-bottom: 10px;
-            a{
-                font-weight: 600;
-                color: #FF851D;
-                transition: all .3s;
-                text-decoration: underline;
-                text-decoration-color: #FF851D;
-                &:hover{
-                    opacity: .5;
-                }
-            }
+        transition: all 0.3s;
+        &:hover {
+          color: #ff851d;
         }
+      }
     }
-
-    &__list {
-        margin-bottom: 20px;
-
-        &-item {
-            font-style: normal;
-            font-weight: 400;
-            @include adaptiv-font(18, 15);
-            line-height: 150%;
-            margin-bottom: 5px;
-            list-style: disc;
-            margin-left: 20px;
-        }
-    }
-
-    &__cities {
-        margin-bottom: 10px;
-
-        &-item {
-            margin-bottom: 5px;
-            font-style: normal;
-            font-weight: 400;
-            @include adaptiv-font(18, 15);
-            line-height: 150%;
-
-            a{
-                font-weight: 600;
-                color: #1D1D1D;
-                transition: all .3s;
-                &:hover{
-                    color: #FF851D;
-                }
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: 700px) {
-    .service {
-        &__container {
-            flex-direction: column;
-        }
-
-        &__info {
-            width: 100%;
-            margin-right: 0;
-        }
-
-        &__img {
-            @include adaptiv-marginTop(15, 10);
-        }
+  .service {
+    &__container {
+      flex-direction: column;
     }
+
+    &__info {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__img {
+      @include adaptiv-marginTop(15, 10);
+    }
+  }
 }
