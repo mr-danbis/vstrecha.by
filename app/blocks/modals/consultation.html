@@ -1,0 +1,49 @@
+<section class="modal">
+    <div class="modal__overlay"></div>
+    <form class="modal__form" action="">
+        <img class="modal__close" src="/images/icons/close-black.svg" alt="" />
+        <h1 class="modal__title">Запись на консультацию</h1>
+        <div class="modal__form-content">
+            <div class="modal__form-group">
+                <div class="modal__form-item modal__form-item--small">
+                    <label class="modal__form-label">Выбери специалиста</label>
+                    <select class="modal__form-input">
+                        <option class="modal__form-option" value="">Выбрать</option>
+                        <option class="modal__form-option" value="Test 1">Test 1</option>
+                        <option class="modal__form-option" value="Test 2">Test 2</option>
+                    </select>
+                </div>
+                <div class="modal__form-item modal__form-item--small">
+                    <label class="modal__form-label">Город</label>
+                    <select class="modal__form-input">
+                        <option class="modal__form-option" value="">Выбрать</option>
+                        <option class="modal__form-option" value="Минск">Минск</option>
+                        <option class="modal__form-option" value="Гродно">Гродно</option>
+                        <option class="modal__form-option" value="Брест">Брест</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal__form-item">
+                <label class="modal__form-label">Укажи свое имя</label>
+                <input class="modal__form-input" type="text" placeholder="Иван">
+            </div>
+            <div class="modal__form-group">
+                <div class="modal__form-item modal__form-item--small">
+                    <label class="modal__form-label">Для подтверждения записи укажи номер телефона</label>
+                    <input class="modal__form-input" type="text" placeholder="+375 (29) 123-45-67">
+                </div>
+                <div class="modal__form-item modal__form-item--small">
+                    <label class="modal__form-label">E-mail /мессенджер (Telegram, VIber и др.)</label>
+                    <input class="modal__form-input" type="text" placeholder="Info@mail.com">
+                </div>
+            </div>
+        </div>
+        <button class="modal__btn">Отправить</button>
+        <div class="modal__personal">
+            <input type="checkbox">
+            <p>
+                Нажимая кнопку «Отправить», ты соглашаешься на <a href="">обработку персональных данных</a>
+            </p>
+        </div>
+    </form>
+</section>

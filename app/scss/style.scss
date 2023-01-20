@@ -11,9 +11,10 @@
 @import "../blocks/sidebar/sidebar";
 @import "../blocks/sliders/sliders";
 @import "../blocks/navigation/navigation";
+@import "../blocks/modals/modal";
 
 //is 18 page styles
-@import "../blocks/is18Page/is18";
+@import "../blocks/pages/is18/is18";
 
 //main page blocks
 @import "../blocks/sliders/mainPage/banner/bannerSlider";
@@ -37,11 +38,11 @@
 @import "../blocks/calendar/date/date";
 
 //service page blocks
-@import "../blocks/service/service";
+@import "../blocks/pages/service/service";
 
 //news list page blocks
 @import "../blocks/sliders/newsListPage/newsList";
 
 //news item page blocks
-@import "../blocks/newsPage/newsItem";
+@import "../blocks/pages/newsItem/newsItem";
 @import "../blocks/sliders/otherNews/otherNews"

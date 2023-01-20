@@ -1,0 +1,138 @@
+.modal {
+    &__overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #f1f1f4;
+        opacity: 0.4;
+        z-index: 12;
+    }
+
+    &__form {
+        position: absolute;
+        max-width: 650px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(29, 29, 29, 0.1);
+        border-radius: 10px;
+        @include adaptiv-paddingTop(50, 30);
+        @include adaptiv-paddingRight(50, 30);
+        @include adaptiv-paddingLeft(50, 30);
+        @include adaptiv-paddingBottom(30, 16);
+
+        &-content {
+            @include adaptiv-marginBottom(30, 20);
+        }
+
+        &-group{
+            display: flex;
+            justify-content: space-between;
+            @include adaptiv-marginBottom(30,15);
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            @include adaptiv-marginBottom(30,15);
+            &--small{
+                width: 48%;
+                margin-bottom: 0;
+            }
+        }
+
+        &-label {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            color: #1D1D1D;
+            margin-bottom: 10px;
+        }
+
+        &-input {
+            outline: none;
+            border: 1px solid #C7C7C7;
+            border-radius: 5px;
+            padding: 15px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #C7C7C7;
+        }
+
+        &-option{
+            color: black;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-font(30, 20);
+        line-height: 37px;
+        @include adaptiv-marginBottom(30, 20);
+    }
+
+    &__btn {
+        background-color: #FF851D;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-font(18, 15);
+        border: 1px solid transparent;
+        padding: 15px 0;
+        width: 100%;
+        transition: all .3s;
+        margin-bottom: 8px;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #FF851D;
+            color: #FF851D;
+        }
+    }
+
+    &__personal{
+        display: flex;
+        align-items: center;
+        @include adaptiv-marginBottom(20,10);
+        input{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            color: #C7C7C7;
+            a{
+                color: #FF851D;
+                transition: all .3s;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
