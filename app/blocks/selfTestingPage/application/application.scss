@@ -1,0 +1,126 @@
+.application {
+  margin: auto;
+  @include adaptiv_marginTop(165, 25);
+  @include adaptiv_marginBottom(200, 25);
+  max-width: 981px;
+  position: relative;
+
+  &__man {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+      100.06deg,
+      #62aef3 -13.69%,
+      #254cb1 44.49%,
+      #414dbc 100.39%
+    );
+    border-radius: 10px;
+    @include adaptiv_paddingBottom(25, 16);
+    @include adaptiv_paddingTop(30, 16);
+    @include adaptiv_paddingLeft(50, 16);
+    @include adaptiv_paddingRight(50, 16);
+
+    &--mob {
+      display: none;
+      margin-top: 15px;
+    }
+  }
+
+  &__info {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-weight: 500;
+    @include adaptiv_font(18, 15);
+    line-height: 22px;
+    color: #ffffff;
+    padding-bottom: 25px;
+  }
+
+  &__button {
+    border: 1px solid #ff851d;
+    background-color: #ff851d;
+    padding: 15px 25px;
+    width: min-content;
+    &:hover {
+      transition: all 0.3s;
+      background: transparent;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .application {
+    &__man {
+      width: 15%;
+    }
+    &__info {
+      width: 37%;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .application {
+    &__man {
+      width: 13%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .application {
+    &__man {
+      width: 15%;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .application {
+    &__man {
+      display: none;
+    }
+    &__info {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .application {
+    &__man {
+      display: none;
+    }
+    &__container {
+      &--mob {
+        display: block;
+      }
+    }
+    &__info {
+      width: 100%;
+      &:last-child {
+        display: none;
+      }
+    }
+    &__text {
+      text-align: center;
+    }
+    &__button {
+      width: 100%;
+    }
+  }
+}
