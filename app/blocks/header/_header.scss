@@ -29,10 +29,12 @@
   &__info {
     display: flex;
     flex-direction: column;
+    width: 320px;
   }
 
   &__logo {
     width: 180px;
+    margin-right: 10px;
   }
 
   &__menu {
@@ -124,6 +126,7 @@
     padding-top: 12px;
     display: flex;
     align-items: start;
+    margin-left: 5px;
   }
 
   &__search {
@@ -183,6 +186,9 @@
       &-right {
         right: -45px;
       }
+    }
+    &__info {
+      width: 350px;
     }
   }
 }

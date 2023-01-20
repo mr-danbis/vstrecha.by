@@ -1,0 +1,28 @@
+.navigation{
+    display: flex;
+    @include adaptiv-marginBottom(40,25);
+    &__item{
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-font(16,14);
+        &:not(:last-child){
+            margin-right: 20px;
+            position: relative;
+            &:after{
+                position: absolute;
+                content: "/";
+                right: -14px;
+                color: #C7C7C7;
+            }
+        }
+        a{
+            color: #C7C7C7;
+        }
+
+        &--active{
+            a{
+                color: #1D1D1D;
+            }
+        }
+    }
+}

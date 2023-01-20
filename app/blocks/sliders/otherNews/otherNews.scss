@@ -1,0 +1,45 @@
+.otherNews {
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-font(30, 20);
+        margin-bottom: 20px;
+    }
+
+    .newsSlider__item-text {
+        display: none;
+    }
+
+
+    .owl-nav {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            border-radius: 5px;
+            border: 1px solid #FF851D;
+            width: 35px;
+            height: 35px;
+            transition: all .3s;
+            background-color: transparent;
+
+            span {
+                transition: all .3s;
+            }
+
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background-color: #FF851D;
+
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+}

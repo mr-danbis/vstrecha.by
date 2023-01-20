@@ -8,20 +8,31 @@
       <!-- /.header_all -->
       <main class="main">
         <div class="container">
-          @@include('../blocks/about/about_us/about_us.html')
+          <section class="navigation">
+            <div class="navigation__item">
+              <a class="navigation__item-link" href="/"> Главная </a>
+            </div>
+            <div class="navigation__item navigation__item--active">
+              <a class="navigation__item-link" href="about_page.html">
+                О нас
+              </a>
+            </div>
+          </section>
+
+          @@include('../blocks/aboutPage/about_us/about_us.html')
           <!-- /.about_us -->
 
-          @@include('../blocks/about/help/help.html')
+          @@include('../blocks/aboutPage/help/help.html')
           <!-- /.help -->
 
-          @@include('../blocks/about/administration/administration.html')
+          @@include('../blocks/aboutPage/administration/administration.html')
           <!-- /.administration -->
         </div>
         <!-- /.container -->
       </main>
       <!-- /.main -->
 
-      @@include('../blocks/about/modal/modal.html')
+      @@include('../blocks/aboutPage/modal/modal.html')
       <!-- /.modal -->
 
       @@include('../blocks/footer/footer.html')

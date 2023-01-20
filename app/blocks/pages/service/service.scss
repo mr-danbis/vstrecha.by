@@ -1,0 +1,164 @@
+.service {
+  &__title {
+    width: 50%;
+  }
+
+  &__container {
+    display: flex;
+    &--self {
+      @include adaptiv-marginBottom(40, 25);
+    }
+  }
+
+  &__info {
+    width: 50%;
+
+    &:first-child {
+      @include adaptiv-marginRight(40, 0);
+    }
+  }
+
+  &__text {
+    @include adaptiv-marginBottom(10, 5);
+    a {
+      font-weight: 600;
+      color: #ff851d;
+      transition: all 0.3s;
+      text-decoration: underline;
+      text-decoration-color: #ff851d;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    @include adaptiv-font(18, 15);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    @include adaptiv-marginBottom(15, 10);
+    @include adaptiv-marginTop(15, 10);
+    &--test {
+      margin-top: 0;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    overflow: hidden;
+    @include adaptiv-marginBottom(10, 5);
+  }
+
+  &__block {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ff851d;
+    @include adaptiv-marginBottom(25, 15);
+    &-title {
+      font-style: normal;
+      font-weight: 600;
+      @include adaptiv-font(18, 15);
+      margin-bottom: 10px;
+      a {
+        font-weight: 600;
+        color: #ff851d;
+        transition: all 0.3s;
+        text-decoration: underline;
+        text-decoration-color: #ff851d;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+
+    &-item {
+      font-style: normal;
+      font-weight: 400;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+      margin-bottom: 5px;
+      list-style: disc;
+      margin-left: 20px;
+
+      &--link {
+        font-weight: 600;
+        color: #ff851d !important;
+        text-decoration: underline;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      a {
+        white-space: nowrap;
+        font-weight: 600;
+        color: #1d1d1d;
+        transition: all 0.3s;
+        &:hover {
+          color: #ff851d;
+        }
+      }
+    }
+  }
+
+  &__cities {
+    margin-bottom: 10px;
+
+    &-item {
+      margin-bottom: 5px;
+      font-style: normal;
+      font-weight: 400;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+
+      a {
+        white-space: nowrap;
+        font-weight: 600;
+        color: #1d1d1d;
+        transition: all 0.3s;
+        &:hover {
+          color: #ff851d;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .service {
+    &__title {
+      width: 100%;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+      margin-right: 0;
+
+      &--second {
+        order: 1;
+      }
+
+      &--first {
+        order: 2;
+      }
+    }
+
+    &__block {
+      @include adaptiv-marginTop(25, 15);
+    }
+
+    &__img {
+      @include adaptiv-marginTop(15, 10);
+    }
+  }
+}

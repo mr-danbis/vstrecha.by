@@ -1,0 +1,244 @@
+.vacancy {
+  position: relative;
+
+  &__title {
+    font-weight: 700;
+    @include adaptiv-font(30, 20);
+    line-height: 37px;
+    color: #000000;
+    @include adaptiv-marginBottom(25, 20);
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__text {
+    width: 50%;
+    @include adaptiv-marginRight(40, 5);
+    font-weight: 400;
+    @include adaptiv-font(18, 15);
+    line-height: 150%;
+    color: #1d1d1d;
+  }
+
+  &__check {
+    width: 50%;
+    &-text {
+      font-weight: 600;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+      color: #1d1d1d;
+      max-width: 362px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__select {
+    width: 60%;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #1d1d1d;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1d1d1d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/images/icons/drop-down-black.svg") no-repeat right center;
+    outline: 0;
+  }
+
+  &__overlay {
+    display: none;
+  }
+
+  &__not {
+    display: none;
+    position: absolute;
+    right: -70px;
+    top: -20px;
+  }
+
+  &__container {
+    display: flex;
+    @include adaptiv-marginTop(40, 25);
+    align-items: start;
+
+    &-lida {
+      display: none;
+    }
+
+    &-gomel {
+      display: none;
+    }
+  }
+
+  &__data {
+    width: 50%;
+    @include adaptiv-marginRight(40, 5);
+  }
+
+  &__inner {
+    @include adaptiv-marginBottom(30, 15);
+  }
+
+  &__vacancy {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    @include adaptiv-font(18, 15);
+    line-height: 150%;
+    color: #1d1d1d;
+    @include adaptiv-paddingBottom(10, 8);
+    border-bottom: 1px solid #c7c7c7;
+    @include adaptiv-marginBottom(15, 10);
+    &-up {
+      display: none;
+    }
+  }
+  .active {
+    border-bottom: 1px solid #ffa456;
+    .vacancy__vacancy-down {
+      display: none;
+    }
+    .vacancy__vacancy-up {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin-bottom: 25px;
+    display: none;
+    &-name {
+      font-weight: 600;
+      @include adaptiv-font(18, 15);
+      line-height: 150%;
+      color: #1d1d1d;
+      @include adaptiv-paddingBottom(10, 5);
+    }
+  }
+
+  &__list {
+    margin-bottom: 15px;
+    &-item {
+      margin-left: 20px;
+      font-weight: 400;
+      @include adaptiv_font(18, 15);
+      line-height: 150%;
+      color: #1d1d1d;
+      list-style-type: disc;
+      width: 95%;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+    &:hover {
+      transition: all 0.3s;
+      background: transparent;
+      color: #ff851d;
+    }
+  }
+
+  &__photo {
+    width: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1600px) {
+  .vacancy {
+    &__not {
+      right: -20px;
+      top: -35px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .vacancy {
+    &__check {
+      &-text {
+        max-width: 340px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .vacancy {
+    &__not {
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+    }
+    &__overlay {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #f1f1f4;
+      opavacancy: 0.4;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .vacancy {
+    &__info {
+      flex-direction: column;
+    }
+
+    &__text {
+      margin-right: 0;
+      width: 100%;
+      padding-bottom: 25px;
+    }
+
+    &__check {
+      width: 100%;
+      &-text {
+        max-width: 100%;
+      }
+    }
+
+    &__select {
+      width: 100%;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__data {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
+
+    &__photo {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .vacancy {
+    &__not {
+      width: 100%;
+      left: 0%;
+      top: 20%;
+      transform: translate(-5%, -60%);
+    }
+  }
+}

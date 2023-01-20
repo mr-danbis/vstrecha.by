@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../blocks/head/head.html')
+
+  <body>
+    <div class="wrapper">
+      @@include('../blocks/header/header.html')
+      <!-- /.header_all -->
+      <main class="main">
+        <div class="container">
+          <section class="navigation">
+            <div class="navigation__item">
+              <a class="navigation__item-link" href="/"> Главная </a>
+            </div>
+            <div class="navigation__item">
+              <a class="navigation__item-link" href="news-list_page.html">
+                Новости
+              </a>
+            </div>
+            <div class="navigation__item navigation__item--active">
+              <a
+                class="navigation__item-link"
+                href="top-10-liderov-so-znakom-minus-v-sfere-VICH.html"
+              >
+                Топ-10 лидеров со знаком минус в сфере ВИЧ
+              </a>
+            </div>
+          </section>
+
+          <section class="newsItem">
+            <h1 class="title">Топ-10 лидеров со знаком минус в сфере ВИЧ</h1>
+
+            <div class="newsItem__content">
+              <div class="newsItem__content-img">
+                <img
+                  src="/images/newsItem/1.png"
+                  alt="Топ-10 лидеров со знаком минус в сфере ВИЧ"
+                />
+              </div>
+
+              <div class="newsItem__content-info">
+                <p>
+                  По оценкам ЮНЭЙДС и Европейского центра профилактики и
+                  контроля заболеваний, почти половина всех новых случаев
+                  заражения ВИЧ в 2021 году приходится на 10 стран, сообщает
+                  сервис Statista.
+                </p>
+                <ul>
+                  <li>Южная Африка — 14%</li>
+                  <li>Мозамбик — 6,5%</li>
+                  <li>Нигерия — 4,9%</li>
+                  <li>Индия — 4,2%</li>
+                  <li>Россия — 3,9%</li>
+                  <li>Танзания — 3,6%</li>
+                  <li>Уганда — 3,6%</li>
+                  <li>Бразилия — 3,3%</li>
+                  <li>Замбия — 2,5%</li>
+                  <li>Кения — 2,3%</li>
+                </ul>
+                <p>
+                  При этом на Южную Африку, Мозамбик, Нигерию, Танзанию и Уганду
+                  приходится почти треть из предполагаемых 1,5 млн новых случаев
+                  инфицирования в прошлом году. Это свидетельствует о том,
+                  что страны Африки к югу от Сахары остаются эпицентром
+                  эпидемии ВИЧ.
+                </p>
+                <p>
+                  Хотя число новых случаев заболевания сократилось
+                  с 2,9 млн в 2000 году до 1,5 млн в прошлом году, число людей,
+                  живущих с ВИЧ, увеличилось за последние два десятилетия
+                  с 26 млн до более чем 38 млн. По данным ЮНЭЙДС, это увеличение
+                  вызвано не только новыми случаями инфицирования,
+                  но и свидетельством прогресса, достигнутого в лечении
+                  ВИЧ с помощью антиретровирусной терапии, которая значительно
+                  улучшила перспективы жизни ВИЧ-позитивных людей.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          @@include('../blocks/sliders/otherNews/otherNews.html')
+          <!-- /. other news slider -->
+        </div>
+        <!-- /.container -->
+      </main>
+      <!-- /.main -->
+
+      @@include('../blocks/footer/footer.html')
+      <!-- /.footer -->
+
+      @@include('../blocks/sidebar/sidebar.html')
+      <!-- /.sidebar -->
+    </div>
+    <!-- /.wrapper -->
+
+    @@include('../blocks/foot/foot.html')
+    <!-- /.foot -->
+  </body>
+</html>

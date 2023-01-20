@@ -10,9 +10,11 @@
 @import "../blocks/footer/footer";
 @import "../blocks/sidebar/sidebar";
 @import "../blocks/sliders/sliders";
+@import "../blocks/navigation/navigation";
+@import "../blocks/modals/modal";
 
 //is 18 page styles
-@import "../blocks/is18Page/is18";
+@import "../blocks/pages/is18/is18";
 
 //main page blocks
 @import "../blocks/sliders/mainPage/banner/bannerSlider";
@@ -22,8 +24,34 @@
 @import "../blocks/main/addresses/addresses";
 @import "../blocks/main/partners/partners";
 
-//about page blocks
-@import "../blocks/about/administration/administration";
-@import "../blocks/about/about_us/about_us";
-@import "../blocks/about/help/help";
-@import "../blocks/about/modal/modal";
+//aboutPage page blocks
+@import "../blocks/aboutPage/administration/administration";
+@import "../blocks/aboutPage/about_us/about_us";
+@import "../blocks/aboutPage/help/help";
+@import "../blocks/aboutPage/modal/modal";
+
+//vacancyPage page blocks
+@import "../blocks/vacancyPage/vacancy";
+
+//calendarPage page blocks
+@import "../blocks/calendarPage/definition/definition";
+@import "../blocks/calendarPage/date/date";
+
+//service page blocks
+@import "../blocks/pages/service/service";
+
+//selfTestingPage page blocks
+@import "../blocks/selfTestingPage/result/result";
+@import "../blocks/selfTestingPage/application/application";
+
+//news list page blocks
+@import "../blocks/sliders/newsListPage/newsList";
+
+//news item page blocks
+<<<<<<< HEAD
+@import "../blocks/pages/newsItem/newsItem";
+@import "../blocks/sliders/otherNews/otherNews"
+=======
+@import "../blocks/newsPage/newsItem";
+@import "../blocks/sliders/otherNews/otherNews";
+>>>>>>> master
