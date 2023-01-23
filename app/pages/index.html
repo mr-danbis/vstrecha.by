@@ -15,14 +15,20 @@
 
         <main class="main">
 
-            @@include('../blocks/pages/main/areas/areas.html')
-            <!-- /.areas -->
+            <div class="container">
+                @@include('../blocks/pages/main/areas/areas.html')
+                <!-- /.areas -->
+            </div>
+
             @@include('../blocks/pages/main/news/news.html')
             <!-- /.news -->
-            @@include('../blocks/pages/main/addresses/addresses.html')
-            <!-- /.addresses -->
-            @@include('../blocks/pages/main/partners/partners.html')
-            <!-- /.partners -->
+
+            <div class="container">
+                @@include('../blocks/pages/main/addresses/addresses.html')
+                <!-- /.addresses -->
+                @@include('../blocks/pages/main/partners/partners.html')
+                <!-- /.partners -->
+            </div>
 
         </main>
         <!-- /.main -->

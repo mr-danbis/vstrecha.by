@@ -221,4 +221,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    $(".contacts__item-title").click(function (event) {
+        $(this).next().slideToggle();
+    });
+
 });
