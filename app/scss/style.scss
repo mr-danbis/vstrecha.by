@@ -18,11 +18,11 @@
 
 //main page blocks
 @import "../blocks/sliders/mainPage/banner/bannerSlider";
-@import "../blocks/main/areas/areas";
-@import "../blocks/main/news/news";
+@import "../blocks/pages/main/areas/areas";
+@import "../blocks/pages/main/news/news";
 @import "../blocks/sliders/mainPage/news/newsSlider";
-@import "../blocks/main/addresses/addresses";
-@import "../blocks/main/partners/partners";
+@import "../blocks/pages/main/addresses/addresses";
+@import "../blocks/pages/main/partners/partners";
 
 //aboutPage page blocks
 @import "../blocks/aboutPage/administration/administration";
@@ -48,10 +48,5 @@
 @import "../blocks/sliders/newsListPage/newsList";
 
 //news item page blocks
-<<<<<<< HEAD
 @import "../blocks/pages/newsItem/newsItem";
-@import "../blocks/sliders/otherNews/otherNews"
-=======
-@import "../blocks/newsPage/newsItem";
 @import "../blocks/sliders/otherNews/otherNews";
->>>>>>> master
