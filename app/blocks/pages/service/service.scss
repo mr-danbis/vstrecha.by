@@ -8,10 +8,19 @@
     &--self {
       @include adaptiv-marginBottom(40, 25);
     }
+    &--prep {
+      @include adaptiv-marginBottom(60, 25);
+    }
   }
 
   &__info {
     width: 50%;
+
+    &--prep {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &:first-child {
       @include adaptiv-marginRight(40, 0);
@@ -71,6 +80,11 @@
           opacity: 0.5;
         }
       }
+    }
+
+    &--prep {
+      @include adaptiv-marginTop(21, 15);
+      max-width: 480px;
     }
   }
 
