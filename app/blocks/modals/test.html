@@ -1,0 +1,241 @@
+<section class="modal modal-test">
+  <div class="modal__overlay"></div>
+  <form class="modal__form" action="">
+    <img class="modal__close" src="/images/icons/close-black.svg" alt="" />
+    <h1 class="modal__title">Заявка на получение теста на ВИЧ</h1>
+    <div class="modal__form-content">
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <p class="modal__form-label">Выбери регион, в котором проживаешь</p>
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Минск">Минск</option>
+            <option class="modal__form-option" value="Гродно">Гродно</option>
+            <option class="modal__form-option" value="Брест">Брест</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal__form-item">
+        <p class="modal__form-label">
+          Ты идентифицируешь себя как мужчина, практикующий секс с
+          мужчинами/транс гендерный человек
+        </p>
+        <div class="modal__form-radio">
+          <div class="modal__form-radio--item">
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="1"
+            />
+            <label class="modal__text">Да</label>
+          </div>
+          <div class="modal__form-radio--item">
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="1"
+            />
+            <label class="modal__text">Нет</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__form-group">
+        <div
+          class="modal__form-item modal__form-item--small modal__form-item--check"
+        >
+          <p class="modal__form-label">Тебе исполнилось 18 лет?</p>
+          <div class="modal__form-radio">
+            <div class="modal__form-radio--item">
+              <input
+                class="modal__radio-check"
+                type="radio"
+                name="contact"
+                id="1"
+              />
+              <label class="modal__text">Да</label>
+            </div>
+            <div class="modal__form-radio--item">
+              <input
+                class="modal__radio-check"
+                type="radio"
+                name="contact"
+                id="1"
+              />
+              <label class="modal__text">Нет</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Выбери свой гендер</label>
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Женщина">Женщина</option>
+            <option class="modal__form-option" value="Мужчина">Мужчина</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">
+            Укажи 2 первые буквы полного имени своей матери
+          </label>
+          <input class="modal__form-input" type="text" placeholder="ЕЛ" />
+          <p class="modal__form-detail">Елена, а не Лена</p>
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Укажи число своего рождения</label>
+          <input class="modal__form-input" type="text" placeholder="12" />
+          <p class="modal__form-detail">Только число</p>
+        </div>
+      </div>
+
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">
+            Укажи 2 первые буквы своего полного имени
+          </label>
+          <input class="modal__form-input" type="text" placeholder="АЛ" />
+          <p class="modal__form-detail">Александр, а не Саша</p>
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">
+            Укажи 2 последние цифры своего года рождения
+          </label>
+          <input class="modal__form-input" type="text" placeholder="85" />
+          <p class="modal__form-detail">85, если год рождения 1985</p>
+        </div>
+      </div>
+
+      <div class="modal__form-item">
+        <p class="modal__form-label">Какой способ доставки тебе удобен?</p>
+        <div class="modal__form-radio">
+          <div class="modal__form-radio--item">
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="pickup"
+            />
+            <label class="modal__text">Самовывоз</label>
+          </div>
+          <div class="modal__form-radio--item">
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="post"
+            />
+            <label class="modal__text">Почта</label>
+          </div>
+          <div class="modal__form-radio--item">
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="courier"
+            />
+            <label class="modal__text">Курьер</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__form-group modal__form-group--pickup">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Выбери пункт самовывоза</label>
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Минск">Минск</option>
+            <option class="modal__form-option" value="Гродно">Гродно</option>
+            <option class="modal__form-option" value="Брест">Брест</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal__form-group modal__form-group--post">
+        <div class="modal__form-group">
+          <div class="modal__form-item modal__form-item--small">
+            <label class="modal__form-label">Индекс</label>
+            <input class="modal__form-input" type="text" placeholder="220022" />
+          </div>
+          <div class="modal__form-item modal__form-item--small">
+            <label class="modal__form-label">Город</label>
+            <select class="modal__form-input">
+              <option class="modal__form-option" value="">Выбрать</option>
+              <option class="modal__form-option" value="Минск">Минск</option>
+              <option class="modal__form-option" value="Гродно">Гродно</option>
+              <option class="modal__form-option" value="Брест">Брест</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal__form-group">
+          <div
+            class="modal__form-item modal__form-item--small modal__form-item--check"
+          >
+            <label class="modal__form-label">Улица</label>
+            <input
+              class="modal__form-input"
+              type="text"
+              placeholder="ул. Нововиленская"
+            />
+          </div>
+          <div class="modal__form-item modal__form-item--small">
+            <div class="modal__form-group">
+              <div class="modal__form-item modal__form-item--small">
+                <label class="modal__form-label">Дом</label>
+                <input class="modal__form-input" type="text" placeholder="11" />
+              </div>
+              <div class="modal__form-item modal__form-item--small">
+                <label class="modal__form-label">Квартира</label>
+                <input class="modal__form-input" type="text" placeholder="11" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__form-group modal__form-group--courier">
+        <p class="modal__form-label">
+          После подтверждения заявки, наш курьер свяжется с тобой.
+        </p>
+      </div>
+
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label"
+            >Для подтверждения записи укажи номер телефона</label
+          >
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="+375 (29) 123-45-67"
+          />
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label"
+            >E-mail /мессенджер (Telegram, VIber и др.)</label
+          >
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="Info@mail.com"
+          />
+        </div>
+      </div>
+    </div>
+    <a class="modal__btn modal__btn-test">Отправить</a>
+    <div class="modal__personal">
+      <input type="checkbox" />
+      <p>
+        Нажимая кнопку «Отправить», ты соглашаешься на 
+        <a href="">обработку персональных данных</a>
+      </p>
+    </div>
+  </form>
+</section>

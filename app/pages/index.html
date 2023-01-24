@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../blocks/head/head.html')
+  @@include('../blocks/head/head.html')
 
-<body>
+  <body>
     <div class="wrapper mainPage">
+      <div class="box">
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+        @@include('../blocks/sliders/mainPage/banner/bannerSlider.html')
+        <!-- /.banner slider -->
+      </div>
 
-        <div class="box">
-            @@include('../blocks/header/header.html')
-            <!-- /.header -->
-            @@include('../blocks/sliders/mainPage/banner/bannerSlider.html')
-            <!-- /.banner slider -->
+      <main class="main">
+        <div class="container">
+          @@include('../blocks/pages/main/areas/areas.html')
+          <!-- /.areas -->
         </div>
 
+        @@include('../blocks/pages/main/news/news.html')
+        <!-- /.news -->
 
-        <main class="main">
+        <div class="container">
+          @@include('../blocks/pages/main/addresses/addresses.html')
+          <!-- /.addresses -->
+          @@include('../blocks/pages/main/partners/partners.html')
+          <!-- /.partners -->
+        </div>
+      </main>
+      <!-- /.main -->
 
-            <div class="container">
-                @@include('../blocks/pages/main/areas/areas.html')
-                <!-- /.areas -->
-            </div>
+      @@include('../blocks/footer/footer.html')
+      <!-- /.footer -->
 
-            @@include('../blocks/pages/main/news/news.html')
-            <!-- /.news -->
+      @@include('../blocks/sidebar/sidebar.html')
+      <!-- /.sidebar -->
 
-            <div class="container">
-                @@include('../blocks/pages/main/addresses/addresses.html')
-                <!-- /.addresses -->
-                @@include('../blocks/pages/main/partners/partners.html')
-                <!-- /.partners -->
-            </div>
+      @@include('../blocks/modals/consultation.html')
+      <!-- /.consultation modals -->
 
-        </main>
-        <!-- /.main -->
-
-        @@include('../blocks/footer/footer.html')
-        <!-- /.footer -->
-
-        @@include('../blocks/sidebar/sidebar.html')
-        <!-- /.sidebar -->
+      @@include('../blocks/modals/success.html')
+      <!-- /.success modals -->
     </div>
     <!-- /.wrapper -->
 
     @@include('../blocks/foot/foot.html')
     <!-- /.foot -->
-</body>
-
+  </body>
 </html>

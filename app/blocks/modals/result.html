@@ -1,0 +1,148 @@
+<section class="modal modal-res">
+  <div class="modal__overlay"></div>
+  <form class="modal__form modal__form-res" action="">
+    <img class="modal__close" src="/images/icons/close-black.svg" alt="" />
+    <h1 class="modal__title">Сообщить результат</h1>
+    <p class="modal__text modal__text-title">
+      Мы просим всех, кто прошёл экспресс-тестирование на ВИЧ с помощью нашего
+      набора для самотестирования, сообщить нам о своих результатах.
+      Ты сообщаешь анонимно только свой регион проживания и индивидуальный код,
+      который создал самостоятельно при заказе экспресс-теста. Наш сотрудник
+      вписал его в бланк, который ты получил в наборе для самотестирования.
+    </p>
+    <div class="modal__form-content">
+      <div class="modal__form-item">
+        <label class="modal__form-label">Выбери регион</label>
+        <select class="modal__form-input">
+          <option class="modal__form-option" value="">Выбрать</option>
+          <option class="modal__form-option" value="Минск">Минск</option>
+          <option class="modal__form-option" value="Гродно">Гродно</option>
+          <option class="modal__form-option" value="Брест">Брест</option>
+        </select>
+      </div>
+      <div class="modal__form-item">
+        <label class="modal__form-label">
+          Код клиента (указан в бланке, который вложен в набор
+          для самотестирования)
+        </label>
+        <input class="modal__form-input" type="text" />
+      </div>
+      <div class="modal__form-item">
+        <label class="modal__form-label">
+          Выбери подходящий вариант
+          <p class="modal__text modal__text-item">
+            Внимательно посмотри на свой экспресс-тест, сравни результат
+            с картинкой. Интенсивность цвета полоски на результат теста
+            не влияет!
+          </p>
+        </label>
+        <div class="modal__radio">
+          <div class="modal__radio-info">
+            <p class="modal__form-label">ВИЧ-Отрицательный результат</p>
+            <p class="modal__text modal__radio-text">
+              ОДНА ЛИНИЯ рядом с «C» и НЕТ линии рядом с «T
+            </p>
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="orange"
+            />
+            <label class="modal__form-label">Выбрать</label>
+          </div>
+          <img
+            class="modal__radio-img"
+            src="/images/test/negative.png"
+            alt=""
+          />
+        </div>
+        <div class="modal__radio">
+          <div class="modal__radio-info">
+            <p class="modal__form-label">ВИЧ-Положительный результат</p>
+            <p class="modal__text modal__radio-text">
+              ДВЕ ЦЕЛЬНЫЕ ЛИНИИ, даже если одна из них слабовыражена. Возможен
+              положительный результат. Необходимо провести дополнительный тест.
+            </p>
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="orange"
+            />
+            <label class="modal__form-label">Выбрать</label>
+          </div>
+          <img
+            class="modal__radio-img"
+            src="/images/test/positive.png"
+            alt=""
+          />
+        </div>
+        <div class="modal__radio">
+          <div class="modal__radio-info">
+            <p class="modal__form-label">Результат недействительный</p>
+            <p class="modal__text modal__radio-text">
+              НЕТ ЛИНИИ рядом с «C» (даже тогда, когда есть линия рядом с «Т»),
+              или красный фон, мешающий прочитать тест. Тест не сработал,
+              необходимо пройти повторный тест.
+            </p>
+            <input
+              class="modal__radio-check"
+              type="radio"
+              name="contact"
+              id="orange"
+            />
+            <label class="modal__form-label">Выбрать</label>
+          </div>
+          <img class="modal__radio-img" src="/images/test/not.png" alt="" />
+        </div>
+      </div>
+      <p class="modal__form-label">
+        Если ты хочешь, чтобы наш сотрудник сам с тобой связался, пожалуйста,
+        оставь свои контакты на выбор:
+      </p>
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Номер телефона</label>
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="+375 (29) 123-45-67"
+          />
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">E-mail / социальные сети</label>
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="Info@mail.com"
+          />
+        </div>
+      </div>
+      <div class="modal__form-item">
+        <p class="modal__form-label">
+          Возможно, у тебя есть вопросы по результатам теста или твоим
+          дальнейшим действиям?
+        </p>
+        <p class="modal__text modal__text-item">
+          Наши сотрудники готовы ответить на них! <br />
+          Звони с 14.00 до 20.00 в будние дни по телефонам: <br />
+          Минск +375 (33) 389–57–18 <br />
+          Витебск +375 (29) 896–14–03 <br />
+          Гродно +375 (29) 823–05–15 <br />
+          Гомель +375 (33) 357–83–97 <br />
+          Могилёв +375 (33) 382–81–58 <br />
+          Брест +375 (29) 823–07–77
+        </p>
+        <p class="modal__text modal__text-item"></p>
+      </div>
+    </div>
+    <a class="modal__btn modal__btn-res">Отправить</a>
+    <div class="modal__personal">
+      <input type="checkbox" />
+      <p>
+        Нажимая кнопку «Отправить», ты соглашаешься на 
+        <a href=""> обработку персональных данных </a>
+      </p>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,78 @@
+<section class="modal modal-survey">
+  <div class="modal__overlay"></div>
+  <form class="modal__form" action="">
+    <img class="modal__close" src="/images/icons/close-black.svg" alt="" />
+    <h1 class="modal__title">Пройти опрос</h1>
+    <div class="modal__form-content">
+      <div class="modal__form-item">
+        <label class="modal__form-label">Имя</label>
+        <input class="modal__form-input" type="text" placeholder="Иван" />
+      </div>
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Сколько тебе лет?</label>
+          <input class="modal__form-input" type="text" placeholder="19 лет" />
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Выбери свой гендер</label>
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Женщина">Женщина</option>
+            <option class="modal__form-option" value="Мужчина">Мужчина</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Город</label>
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Минск">Минск</option>
+            <option class="modal__form-option" value="Гродно">Гродно</option>
+            <option class="modal__form-option" value="Брест">Брест</option>
+          </select>
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label">Семейное положение</label>
+          <select class="modal__form-input">
+            <option class="modal__form-option" value="">Выбрать</option>
+            <option class="modal__form-option" value="Женат">
+              Женат/замужем
+            </option>
+            <option class="modal__form-option" value="Одинок">Одинок(а)</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal__form-group">
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label"
+            >Для подтверждения записи укажи номер телефона</label
+          >
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="+375 (29) 123-45-67"
+          />
+        </div>
+        <div class="modal__form-item modal__form-item--small">
+          <label class="modal__form-label"
+            >E-mail /мессенджер (Telegram, VIber и др.)</label
+          >
+          <input
+            class="modal__form-input"
+            type="text"
+            placeholder="Info@mail.com"
+          />
+        </div>
+      </div>
+    </div>
+    <a class="modal__btn modal__btn-sur">Отправить</a>
+    <div class="modal__personal">
+      <input type="checkbox" />
+      <p>
+        Нажимая кнопку «Отправить», ты соглашаешься на 
+        <a href="">обработку персональных данных</a>
+      </p>
+    </div>
+  </form>
+</section>
