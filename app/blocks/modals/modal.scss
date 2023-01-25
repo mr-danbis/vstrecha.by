@@ -3,6 +3,11 @@
 
   &-complite {
     display: none;
+    .modal__form {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__overlay {
@@ -94,13 +99,8 @@
     }
 
     &-res {
-      top: 92%;
-      transform: translate(-50%, -40%);
-    }
-
-    &-test {
-      top: 70%;
-      transform: translate(-50%, -40%);
+      height: 650px;
+      overflow: scroll;
     }
 
     &-radio {
