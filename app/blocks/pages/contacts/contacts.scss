@@ -1,66 +1,67 @@
-.contacts{
-    &__grid{
-        display: flex;
-        justify-content: space-between;
-        &-item{
-            width: 31%;
-        }
+.contacts {
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      width: 31%;
     }
-    &__item{
-        margin-bottom: 25px;
-        padding: 30px 20px;
-        background-color: #F7F7F7;
-        border-radius: 10px;
-        cursor: pointer;
-        &-title{
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 22px;
-            border-bottom: 2px solid #FF851D;
-            padding-bottom: 10px;
-            position: relative;
-            &::after{
-                position: absolute;
-                right: 0;
-                top: 0;
-                content: url(/images/icons/drop-down-black.svg);
-            }
-        }
-        &-content{
-            display: none;
-        }
-    }
+  }
+  &__item {
+    margin-bottom: 25px;
+    padding: 30px 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    cursor: pointer;
+    &-title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      border-bottom: 2px solid #ff851d;
+      padding-bottom: 10px;
+      position: relative;
 
-    .cityInfo{
-        width: 100%;
-        padding-top: 15px !important;
-        padding: 0;
-        position: static;
-        transform: none;
-        background: transparent;
-        box-shadow: none;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: url(/images/icons/drop-down-black.svg);
+      }
     }
+    &-content {
+      display: none;
+    }
+  }
+
+  .cityInfo {
+    width: 100%;
+    padding-top: 15px !important;
+    padding: 0;
+    position: static;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 800px) {
-    .contacts{
-        &__grid{
-            display: flex;
-            flex-wrap: wrap;
-            &-item{
-                width: 48%;
-            }
-        }
+  .contacts {
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      &-item {
+        width: 48%;
+      }
     }
+  }
 }
 
 @media (max-width: 550px) {
-    .contacts{
-        &__grid{
-            &-item{
-                width: 100%;
-            }
-        }
+  .contacts {
+    &__grid {
+      &-item {
+        width: 100%;
+      }
     }
+  }
 }

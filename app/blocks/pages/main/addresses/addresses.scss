@@ -1,127 +1,197 @@
 .addresses {
-    @include adaptiv-paddingTop(130, 50);
-    @include adaptiv-paddingBottom(130, 50);
+  @include adaptiv-paddingTop(130, 50);
+  @include adaptiv-paddingBottom(130, 50);
 
-    &__map {
-        width: 800px;
-        margin: auto;
-        position: relative;
+  &__map {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
 
-        svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        &-city {
-            position: relative;
-            fill: #EA3225;
-            cursor: pointer;
-            &:hover {
-                stroke: #fff;
-            }
-        }
-
-        &-img {
-            width: 100%;
-        }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+
+    &-city {
+      position: relative;
+      fill: #ea3225;
+      cursor: pointer;
+      &:hover {
+        stroke: #fff;
+      }
+    }
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    .contacts {
+      &__item {
+        background-color: #1d7dd7;
+        &-title {
+          color: #fff;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          border-bottom: 2px solid #fff;
+          &::after {
+            content: url(/images/icons/drop-up.svg);
+          }
+          padding-left: 40px;
+          &::before {
+            position: absolute;
+            width: 32px;
+            left: 0;
+            top: 0;
+            content: url(/images/icons/check.svg);
+          }
+        }
+      }
+    }
+    .cityInfo {
+      width: 100%;
+      padding-top: 15px !important;
+      padding: 0;
+      position: static;
+      transform: none;
+      background: transparent;
+      box-shadow: none;
+
+      &__contact {
+        &-item,
+        &-title {
+          color: #fff;
+        }
+        a {
+          color: #fff;
+        }
+      }
+
+      &__address {
+        &-title,
+        &-text,
+        &-map {
+          color: #ffffff;
+        }
+      }
+      &__title,
+      &__text {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .cityInfo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #FFFFFF;
-    box-shadow: 0px 4px 30px rgba(29, 29, 29, 0.1);
-    border-radius: 10px;
-    width: 380px;
-    padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 4px 30px rgba(29, 29, 29, 0.1);
+  border-radius: 10px;
+  width: 380px;
+  padding: 25px;
 
-    &__contact-item{
-        @include adaptiv-font(18,15);
-        margin-bottom: 5px;
-        a{
-            color: #1D1D1D;
-            transition: all .3s;
-            &:hover{
-                color: #EA3225;
-            }
-        }
+  &__contact-item {
+    @include adaptiv-font(18, 15);
+    margin-bottom: 5px;
+    a {
+      color: #1d1d1d;
+      transition: all 0.3s;
+      &:hover {
+        color: #ea3225;
+      }
     }
-    
-    &__bg{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        opacity: 0;
-        z-index: 10;
-        pointer-events: none;
-        transition: .3s all;
+  }
 
-        &.active{
-            pointer-events: all;
-            opacity: 1;
-            transition: .3s all;
-        }
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: 0.3s all;
+
+    &.active {
+      pointer-events: all;
+      opacity: 1;
+      transition: 0.3s all;
     }
+  }
 
-    &__address{
-        margin-bottom: 5px;
-        &-title{
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-        &-img{
-            margin-bottom: 5px;
-            width: 100%;
-            height: 12rem;
-            object-fit: cover;
-            margin-bottom: 5px;
-        }
-        &-text{
-            margin-bottom: 5px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 22px;
-        }
-        &-map{
-            color: #1D1D1D;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            text-decoration-line: underline;
-            display: block;
-            transition: all .3s;
-            &:hover{
-                color: #FF851D;
-            }
-        }
+  &__address {
+    margin-bottom: 5px;
+    &-title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 8px;
     }
-
-    &__block{
-        margin-bottom: 12px;
+    &-img {
+      margin-bottom: 5px;
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+      margin-bottom: 5px;
     }
-
-    &__title{
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 22px;
-        margin-bottom: 8px;
+    &-text {
+      margin-bottom: 5px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
     }
-
-    &__text{
-        @include adaptiv-font(18,15);
+    &-map {
+      color: #1d1d1d;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration-line: underline;
+      display: block;
+      transition: all 0.3s;
+      &:hover {
+        color: #ff851d;
+      }
     }
+  }
 
+  &__block {
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @include adaptiv-font(18, 15);
+  }
+}
+
+@media (max-width: 600px) {
+  .addresses {
+    &__map {
+      display: none;
+    }
+    &__list {
+      display: block;
+    }
+    .cityInfo__bg {
+      display: none;
+    }
+  }
 }

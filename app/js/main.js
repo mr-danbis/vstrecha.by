@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formBtn = document.querySelectorAll(".modal-btn-open");
     const formtest = document.querySelectorAll(".modal-test-open");
     const formProg = document.querySelectorAll(".modal-prog-open");
-    // const formSur = document.querySelectorAll(".modal-sur-open");
+    const formSur = document.querySelectorAll(".modal-sur-open");
     const formRes = document.querySelectorAll(".modal-res-open");
     // const formQuest = document.querySelectorAll(".modal-quest-open");
     const modal = document.querySelectorAll(".modal");
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formDone = document.querySelectorAll(".modal__btn-cons");
     const formDoneTest = document.querySelectorAll(".modal__btn-test");
     // const formDoneQest = document.querySelectorAll(".modal__btn-qest");
-    // const formDoneSur = document.querySelectorAll(".modal__btn-sur");
+    const formDoneSur = document.querySelectorAll(".modal__btn-sur");
     const formDoneRes = document.querySelectorAll(".modal__btn-res");
 
     const modalSuccess = document.querySelectorAll(".modal-complite");
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const modalForm = document.querySelector(".modal-consultation");
     const modaltestForm = document.querySelector(".modal-test");
-    // const modalSurForm = document.querySelector(".modal-survey");
+    const modalSurForm = document.querySelector(".modal-survey");
     // const modalQuestForm = document.querySelector(".modal-question");
     const modalProgForm = document.querySelector(".modal-program");
     const modalResForm = document.querySelector(".modal-res");
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalDone = document.querySelector(".modal-complite__cons");
     const modalDoneTest = document.querySelector(".modal-complite__test");
     // const modalDoneQest = document.querySelector(".modal-complite__qest");
-    // const modalDoneSur = document.querySelector(".modal-complite__sur");
+    const modalDoneSur = document.querySelector(".modal-complite__sur");
     const modalDoneRes = document.querySelector(".modal-complite__res");
 
     formBtn.forEach((btn) => {
@@ -205,11 +205,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // formSur.forEach((btn) => {
-    //   btn.addEventListener("click", () => {
-    //     modalSurForm.style.display = "block";
-    //   });
-    // });
+    formSur.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalSurForm.style.display = "block";
+      });
+    });
 
     // formQuest.forEach((btn) => {
     //   btn.addEventListener("click", () => {
@@ -244,14 +244,14 @@ document.addEventListener("DOMContentLoaded", function () {
     //   });
     // });
 
-    // formDoneSur.forEach((btn) => {
-    //   btn.addEventListener("click", () => {
-    //     modalDoneSur.style.display = "block";
-    //     modal.forEach((modal) => {
-    //       modal.style.display = "none";
-    //     });
-    //   });
-    // });
+    formDoneSur.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalDoneSur.style.display = "block";
+        modal.forEach((modal) => {
+          modal.style.display = "none";
+        });
+      });
+    });
 
     formDoneRes.forEach((btn) => {
       btn.addEventListener("click", () => {

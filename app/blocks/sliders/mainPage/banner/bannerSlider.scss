@@ -188,6 +188,9 @@
 }
 
 @media (max-width: 700px) {
+  .box {
+    height: 62vh;
+  }
   .banner {
     .media {
       display: none;
@@ -215,7 +218,7 @@
       }
       &-info {
         background-position-y: -100px;
-        margin-top: -190px;
+        margin-top: -200px;
         vertical-align: bottom;
       }
       &-text {
