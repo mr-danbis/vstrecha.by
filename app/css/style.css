@@ -1075,6 +1075,12 @@ body {
       -ms-transform: translate(-50%, -40%);
           transform: translate(-50%, -40%);
 }
+.modal__form-test {
+  top: 70%;
+  -webkit-transform: translate(-50%, -40%);
+      -ms-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
 .modal__form-radio {
   display: -webkit-box;
   display: -ms-flexbox;
