@@ -30,6 +30,7 @@
   }
 
   &__list {
+    display: none;
     .contacts {
       &__item {
         background-color: #1d7dd7;

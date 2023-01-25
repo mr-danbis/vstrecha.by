@@ -524,14 +524,6 @@ body {
     display: none;
   }
 }
-@media (max-height: 1200px) {
-  .mainPage .box .header {
-    padding-bottom: 350px;
-  }
-  .mainPage .box .header__dots-left {
-    bottom: 200px;
-  }
-}
 .footer {
   background: #23459b;
   padding-top: calc(
@@ -1945,6 +1937,9 @@ body {
 }
 .addresses__map-img {
   width: 100%;
+}
+.addresses__list {
+  display: none;
 }
 .addresses__list .contacts__item {
   background-color: #1d7dd7;
