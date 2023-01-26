@@ -61,6 +61,26 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  function not18Age() {
+    const not18 = document.querySelector(".not18");
+    const not = document.querySelector(".is18__not");
+    const text = document.querySelector(".is18__not-text");
+    const overlay = document.querySelector(".is18__overlay");
+
+    not18.addEventListener("click", function () {
+      not.style.display = "block";
+      overlay.style.display = "block";
+      text.classList.add("show");
+    });
+
+    text.addEventListener("click", function () {
+      not.style.display = "none";
+      text.style.display = "none";
+      overlay.style.display = "none";
+    });
+  }
+  not18Age();
+
   function openMobileSidebar() {
     const burgerBtn = document.querySelector(".header__burger");
     const closeMenuBtn = document.querySelector(".sidebar__close");
