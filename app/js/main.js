@@ -98,25 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   openMobileSidebar();
 
-  function openHelpForm() {
-    const formBtn = document.querySelectorAll(".form-btn");
-    const closeFormBtn = document.querySelectorAll(".modal-help__close");
-    const modalForm = document.querySelector(".modal-help");
-
-    formBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        modalForm.style.display = "block";
-      });
-    });
-
-    closeFormBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        modalForm.style.display = "none";
-      });
-    });
-  }
-  openHelpForm();
-
   function dropDown() {
     $(".sidebar__menu").click(function (event) {
       $(this).toggleClass("active").next().slideToggle();
@@ -202,6 +183,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // const modalDoneQest = document.querySelector(".modal-complite__qest");
     const modalDoneSur = document.querySelector(".modal-complite__sur");
     const modalDoneRes = document.querySelector(".modal-complite__res");
+
+    const formHelpBtn = document.querySelectorAll(".form-btn");
+    const closeHelpFormBtn = document.querySelectorAll(".modal-help__close");
+    const modalHelpForm = document.querySelector(".modal-help");
+
+    formHelpBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalHelpForm.style.display = "block";
+      });
+    });
+
+    closeHelpFormBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalHelpForm.style.display = "none";
+      });
+    });
 
     formBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -295,7 +292,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-  openForm();
+  if (wrapper.classList.contains("form")) {
+    openForm();
+  }
 
   function changeVacancy() {
     const gomel = document.querySelector(".vacancy__container-gomel");
@@ -342,51 +341,56 @@ document.addEventListener("DOMContentLoaded", function () {
     addNumberToSlider();
   }
 
-  const cities = document.querySelectorAll(".addresses__map-city");
-  const modalBG = document.querySelector(".cityInfo__bg");
-  const modal = document.querySelector(".cityInfo");
+  function mapCity() {
+    const cities = document.querySelectorAll(".addresses__map-city");
+    const modalBG = document.querySelector(".cityInfo__bg");
+    const modal = document.querySelector(".cityInfo");
 
-  const cityImg = modal.querySelector(".cityInfo__address-img");
-  const cityAddress = modal.querySelector(".cityInfo__address-text");
-  const cityMap = modal.querySelector(".cityInfo__address-map");
+    const cityImg = modal.querySelector(".cityInfo__address-img");
+    const cityAddress = modal.querySelector(".cityInfo__address-text");
+    const cityMap = modal.querySelector(".cityInfo__address-map");
 
-  class Cities {
-    constructor(img, name, address, map) {
-      this.img = img;
-      this.name = name;
-      this.address = address;
-      this.map = map;
+    class Cities {
+      constructor(img, name, address, map) {
+        this.img = img;
+        this.name = name;
+        this.address = address;
+        this.map = map;
+      }
+
+      creatModal(img, name, address, map) {
+        modalBG.classList.add("active");
+
+        cityImg.setAttribute("src", img);
+        cityImg.setAttribute("alt", name);
+        cityAddress.innerText = address;
+        cityMap.setAttribute("href", map);
+      }
     }
 
-    creatModal(img, name, address, map) {
-      modalBG.classList.add("active");
+    cities.forEach((city) => {
+      city.addEventListener("click", (e) => {
+        new Cities().creatModal(
+          city.dataset.img,
+          city.dataset.name,
+          city.dataset.address,
+          city.dataset.map
+        );
 
-      cityImg.setAttribute("src", img);
-      cityImg.setAttribute("alt", name);
-      cityAddress.innerText = address;
-      cityMap.setAttribute("href", map);
-    }
-  }
-
-  cities.forEach((city) => {
-    city.addEventListener("click", (e) => {
-      new Cities().creatModal(
-        city.dataset.img,
-        city.dataset.name,
-        city.dataset.address,
-        city.dataset.map
-      );
-
-      modal.style.top = e.y + 30 + "px";
-      modal.style.left = e.x + 230 + "px";
+        modal.style.top = e.y + 30 + "px";
+        modal.style.left = e.x + 230 + "px";
+      });
     });
-  });
 
-  document.addEventListener("click", (e) => {
-    if (e.target === modalBG) {
-      modalBG.classList.remove("active");
-    }
-  });
+    document.addEventListener("click", (e) => {
+      if (e.target === modalBG) {
+        modalBG.classList.remove("active");
+      }
+    });
+  }
+  if (wrapper.classList.contains("mainPage")) {
+    mapCity();
+  }
 
   $(".contacts__item-title").click(function (event) {
     $(this).next().slideToggle();
