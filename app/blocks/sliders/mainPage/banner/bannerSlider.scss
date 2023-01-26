@@ -81,7 +81,7 @@
       background-image: url("/images/back-lg.svg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position-y: -150px;
+      background-position-y: -250px;
       padding-bottom: 200px;
       margin-top: -5px;
       top: 0;
@@ -160,6 +160,20 @@
   }
 }
 
+@media (max-width: 1750px) {
+  .bannerSlider {
+    &__item {
+      &-info {
+        background-position-y: -200px;
+      }
+      &-title,
+      &-text {
+        width: 75%;
+      }
+    }
+  }
+}
+
 @media (max-width: 1600px) {
   .bannerSlider {
     &__item {
@@ -167,6 +181,21 @@
       &-text,
       &-link {
         @include adaptiv_marginLeft(150, 0);
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+  .bannerSlider {
+    &__item {
+      &-info {
+        background-position-y: -150px;
+      }
+      &-title,
+      &-text {
+        width: 70%;
       }
     }
   }
@@ -182,6 +211,29 @@
         width: 80%;
         padding-top: 10px;
         line-height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .bannerSlider {
+    &__item {
+      &-title,
+      &-text {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .bannerSlider {
+    &__item {
+      &-title,
+      &-text {
+        width: 100%;
+        margin-left: 0;
       }
     }
   }
@@ -217,15 +269,10 @@
         height: 33vh;
       }
       &-info {
-        background-position-y: -100px;
         margin-top: -200px;
         vertical-align: bottom;
       }
-      &-text {
-        width: 90%;
-      }
       &-title {
-        width: 90%;
         line-height: 30px;
       }
     }
@@ -235,14 +282,11 @@
 @media (max-width: 480px) {
   .bannerSlider {
     &__item {
-      &-text {
-        width: 100%;
-        margin-left: 0;
-      }
       &-title {
-        width: 100%;
         line-height: 30px;
-        margin-left: 0;
+      }
+      &-info {
+        background-position-y: -130px;
       }
     }
   }
