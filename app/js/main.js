@@ -96,7 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
       mobMenu.style.transform = "translateX(-200%)";
     });
   }
-  openMobileSidebar();
+  if (wrapper.classList.contains("sidebar")) {
+    openMobileSidebar();
+  }
 
   function dropDown() {
     $(".sidebar__menu").click(function (event) {
@@ -127,7 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
       $(this).toggleClass("active").next().slideToggle();
     });
   }
-  dropDown();
+  if (wrapper.classList.contains("sidebar")) {
+    dropDown();
+  }
 
   function checkRadio() {
     $(".modal__radio-check").change(function () {
