@@ -67,19 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const text = document.querySelector(".is18__not-text");
     const overlay = document.querySelector(".is18__overlay");
 
-    not18.addEventListener("click", function () {
+    not18.addEventListener("click", () => {
       not.style.display = "block";
       overlay.style.display = "block";
       text.classList.add("show");
     });
 
-    text.addEventListener("click", function () {
+    text.addEventListener("click", () => {
       not.style.display = "none";
       text.style.display = "none";
       overlay.style.display = "none";
     });
   }
-  not18Age();
+  if (wrapper.classList.contains("is18_page")) {
+    not18Age();
+  }
 
   function openMobileSidebar() {
     const burgerBtn = document.querySelector(".header__burger");
