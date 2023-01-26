@@ -1450,7 +1450,8 @@ body {
   );
 }
 .is18__age-btns {
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 .is18__age-btn:first-child {
   margin-right: 15px;
