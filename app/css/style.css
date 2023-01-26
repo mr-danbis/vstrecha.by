@@ -1810,11 +1810,9 @@ body {
             justify-content: center;
   }
   .bannerSlider__item-img {
-    margin-top: 190px;
-    height: 33vh;
+    height: 50vh;
   }
   .bannerSlider__item-info {
-    margin-top: -200px;
     vertical-align: bottom;
   }
   .bannerSlider__item-title {
