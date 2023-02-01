@@ -46,9 +46,19 @@
       color: #ffffff;
       width: 50%;
       height: 100%;
-      &:first-child {
-        border-right: 1px solid #ffffff;
-      }
+    }
+  }
+
+  .owl-prev {
+    border-right: 1px solid #ffffff;
+    span {
+      content: url("/images/icons/left.svg");
+    }
+  }
+
+  .owl-next {
+    span {
+      content: url("/images/icons/right.svg");
     }
   }
 

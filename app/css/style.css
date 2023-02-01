@@ -1615,8 +1615,14 @@ body {
   width: 50%;
   height: 100%;
 }
-.bannerSlider .owl-nav button:first-child {
+.bannerSlider .owl-prev {
   border-right: 1px solid #ffffff;
+}
+.bannerSlider .owl-prev span {
+  content: url("/images/icons/left.svg");
+}
+.bannerSlider .owl-next span {
+  content: url("/images/icons/right.svg");
 }
 .bannerSlider .owl-dots {
   display: none;
