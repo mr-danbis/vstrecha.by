@@ -2,24 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include adaptiv-marginBottom(40, 20);
-  }
-
-  &__arrow {
-    padding: 11px 15px 10px 13px;
-  }
-
-  &__month {
-    font-weight: 800;
-    @include adaptiv-font(30, 20);
-    line-height: 37px;
-    color: #1d1d1d;
-    padding: 0 30px;
+  &__not {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 50px;
+    max-width: 380px;
   }
 
   &__events {
@@ -43,6 +34,41 @@
       line-height: 150%;
       color: #1d1d1d;
       margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .date {
+    &__not {
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -100%);
+    }
+
+    &__overlay {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #f1f1f4;
+      opacity: 0.4;
+      z-index: 12;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .date {
+    &__events {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    &__event {
+      width: 100%;
     }
   }
 }

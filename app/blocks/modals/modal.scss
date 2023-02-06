@@ -317,6 +317,117 @@
       }
     }
   }
+
+  &-events {
+    display: none;
+    &__form {
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        100.06deg,
+        #62aef3 -13.69%,
+        #254cb1 44.49%,
+        #414dbc 100.39%
+      );
+      box-shadow: 0px 4px 30px rgba(29, 29, 29, 0.1);
+      border-radius: 5px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      @include adaptiv-paddingLeft(25, 16);
+      @include adaptiv-paddingRight(25, 16);
+      max-width: 530px;
+    }
+
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    &__item {
+      display: none;
+      padding-top: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ffffff;
+      }
+      &--one,
+      &--two,
+      &--three {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      margin-left: 10px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+      padding-bottom: 10px;
+
+      a {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+
+    &__not {
+      display: none;
+      &-girl {
+        z-index: 1000;
+        position: absolute;
+        left: 55%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &-overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #f1f1f4;
+        opacity: 0.4;
+        z-index: 12;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-events {
+    &__overlay {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #f1f1f4;
+      opacity: 0.4;
+      z-index: 12;
+    }
+    &__form {
+      left: 50%;
+      z-index: 1000;
+    }
+  }
 }
 
 @media (max-width: 900px) {

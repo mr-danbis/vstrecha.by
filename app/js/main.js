@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainPageNewsSlider = new Slider();
   const newsListPageSlider = new Slider();
   const newsItemPageSlider = new Slider();
+  const calendarPageSlider = new Slider();
 
   mainPageBannerSlider.addSlider(".bannerSlider", {
     items: 1,
@@ -59,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
         margin: 40,
       },
     },
+  });
+
+  calendarPageSlider.addSlider(".calendar", {
+    items: 1,
   });
 
   function not18Age() {
@@ -191,6 +196,68 @@ document.addEventListener("DOMContentLoaded", function () {
     const formHelpBtn = document.querySelectorAll(".form-btn");
     const closeHelpFormBtn = document.querySelectorAll(".modal-help__close");
     const modalHelpForm = document.querySelector(".modal-help");
+
+    const formCalendarNotBtn = document.querySelectorAll(".not");
+    const formCalendarOneBtn = document.querySelectorAll(".one");
+    const formCalendarTwoBtn = document.querySelectorAll(".two");
+    // const formCalendarThreeBtn = document.querySelectorAll(".three");
+    const modalCalendarNotForm = document.querySelector(".modal-events__not");
+    const closeCalendarFormBtn = document.querySelectorAll(
+      ".modal-events__close"
+    );
+    const modalCalendarForm = document.querySelector(".modal-events");
+    const modalCalendarOneForm = document.querySelector(
+      ".modal-events__item--one"
+    );
+    const modalCalendarTwoForm = document.querySelector(
+      ".modal-events__item--two"
+    );
+    const modalCalendarThreeForm = document.querySelector(
+      ".modal-events__item--three"
+    );
+
+    formCalendarNotBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalCalendarNotForm.style.display = "block";
+      });
+    });
+
+    modalCalendarNotForm.addEventListener("click", () => {
+      modalCalendarNotForm.style.display = "none";
+    });
+
+    formCalendarOneBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalCalendarForm.style.display = "block";
+        modalCalendarThreeForm.style.display = "block";
+        modalCalendarOneForm.style.display = "none";
+        modalCalendarTwoForm.style.display = "none";
+      });
+    });
+
+    formCalendarTwoBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalCalendarForm.style.display = "block";
+        modalCalendarOneForm.style.display = "block";
+        modalCalendarTwoForm.style.display = "block";
+        modalCalendarThreeForm.style.display = "none";
+      });
+    });
+
+    // formCalendarThreeBtn.forEach((btn) => {
+    //   btn.addEventListener("click", () => {
+    //     modalCalendarForm.style.display = "block";
+    //     modalCalendarOneForm.style.display = "block";
+    //     modalCalendarTwoForm.style.display = "block";
+    //     modalCalendarThreeForm.style.display = "block";
+    //   });
+    // });
+
+    closeCalendarFormBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalCalendarForm.style.display = "none";
+      });
+    });
 
     formHelpBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
