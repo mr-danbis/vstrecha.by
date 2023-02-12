@@ -1,6 +1,14 @@
 .addresses {
   @include adaptiv-paddingTop(130, 50);
   @include adaptiv-paddingBottom(130, 50);
+  position: relative;
+
+  &__man {
+    position: absolute;
+    right: -20%;
+    bottom: 20%;
+    z-index: 1;
+  }
 
   &__map {
     max-width: 800px;
@@ -183,6 +191,15 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .addresses {
+    &__man {
+      right: 0;
+      bottom: 10%;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .addresses {
     &__map {
@@ -192,6 +209,9 @@
       display: block;
     }
     .cityInfo__bg {
+      display: none;
+    }
+    &__man {
       display: none;
     }
   }

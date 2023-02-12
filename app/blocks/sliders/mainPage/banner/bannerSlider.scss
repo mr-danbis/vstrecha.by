@@ -1,5 +1,6 @@
 .banner {
   position: relative;
+
   .media {
     position: absolute;
     background: linear-gradient(
@@ -87,13 +88,22 @@
   &__item {
     position: relative;
     &-info {
+      .header {
+        background: transparent;
+        padding-bottom: 0;
+        &__dots {
+          &-left {
+            bottom: 0px;
+          }
+        }
+      }
       position: absolute;
       background-image: url("/images/back-lg.svg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position-y: -250px;
+      background-position-y: -150px;
       padding-bottom: 200px;
-      margin-top: -5px;
+      margin-top: -200px;
       top: 0;
       width: 100%;
     }
@@ -137,10 +147,10 @@
     }
 
     &-img {
+      margin-top: 200px;
       width: 100vw;
       height: 80vh;
       object-fit: cover;
-      vertical-align: bottom;
       overflow: hidden;
     }
   }
@@ -173,9 +183,6 @@
 @media (max-width: 1750px) {
   .bannerSlider {
     &__item {
-      &-info {
-        background-position-y: -200px;
-      }
       &-title,
       &-text {
         width: 75%;
@@ -200,12 +207,14 @@
 @media (max-width: 1520px) {
   .bannerSlider {
     &__item {
-      &-info {
-        background-position-y: -150px;
-      }
       &-title,
       &-text {
         width: 70%;
+      }
+      &-info {
+        .header {
+          padding-bottom: 0;
+        }
       }
     }
   }
@@ -247,41 +256,41 @@
       }
     }
   }
-}
 
-@media (max-width: 700px) {
-  .box {
-    height: 62vh;
-  }
-  .banner {
-    .media {
-      display: none;
+  @media (max-width: 700px) {
+    .box {
+      height: 72vh;
     }
-  }
-
-  .bannerSlider {
-    .owl {
-      &-nav {
+    .banner {
+      .media {
         display: none;
       }
-
-      &-dots {
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
     }
 
-    &__item {
-      &-img {
-        height: 50vh;
+    .bannerSlider {
+      .owl {
+        &-nav {
+          display: none;
+        }
+
+        &-dots {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
-      &-info {
-        vertical-align: bottom;
-      }
-      &-title {
-        line-height: 30px;
+
+      &__item {
+        &-img {
+          height: 50vh;
+        }
+        &-title {
+          line-height: 30px;
+        }
+        &-info {
+          background-position-y: -130px;
+        }
       }
     }
   }
@@ -294,7 +303,7 @@
         line-height: 30px;
       }
       &-info {
-        background-position-y: -130px;
+        background-position-y: -100px;
       }
     }
   }

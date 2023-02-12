@@ -167,19 +167,7 @@
   .box {
     overflow: hidden;
     .header {
-      background: linear-gradient(
-        100.06deg,
-        #62aef3 -13.69%,
-        #254cb1 44.49%,
-        #414dbc 100.39%
-      );
-      padding-bottom: 20px;
-      z-index: 10;
-      &__dots {
-        &-left {
-          bottom: 0px;
-        }
-      }
+      // display: none;
     }
   }
 }
