@@ -2352,6 +2352,17 @@ body {
     bottom: 10%;
   }
 }
+@media (max-width: 1460px) {
+  .addresses__man {
+    right: 0;
+    bottom: 30%;
+  }
+}
+@media (max-width: 840px) {
+  .addresses__man {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .addresses__map {
     display: none;
@@ -2360,9 +2371,6 @@ body {
     display: block;
   }
   .addresses .cityInfo__bg {
-    display: none;
-  }
-  .addresses__man {
     display: none;
   }
 }

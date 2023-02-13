@@ -200,6 +200,23 @@
   }
 }
 
+@media (max-width: 1460px) {
+  .addresses {
+    &__man {
+      right: 0;
+      bottom: 30%;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .addresses {
+    &__man {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .addresses {
     &__map {
@@ -209,9 +226,6 @@
       display: block;
     }
     .cityInfo__bg {
-      display: none;
-    }
-    &__man {
       display: none;
     }
   }
